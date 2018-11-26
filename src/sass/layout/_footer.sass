@@ -1,0 +1,27 @@
+/* FOOTER STYLES
+
+$footer-link-margin: 0 0 0 1em
+
+footer
+  flex-shrink: 0
+
+  .wrapper
+    +flex(row, center, flex-end)
+
+    margin: 0 auto
+    padding: 2em 0
+
+    span
+      margin: $footer-link-margin
+
+.footer-link
+  font:
+    weight: 500
+    size: 1em
+
+  &:hover
+    color: $accent
+    font-weight: 600
+
+  &:not(:first-of-type)
+    margin: $footer-link-margin
