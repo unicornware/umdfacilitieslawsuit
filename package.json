@@ -11,14 +11,7 @@
     "url": "https://github.com/The-Diamondback-Lab/umd-racial-discrimination"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar src/style/sass/ -o src/style/css/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/style/sass/ -o src/style/css/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "build-js": "react-scripts build",
-    "start": "npm-run-all -p watch-css start-js",
-    "build": "npm-run-all build-css build-js",
-    "test": "semistandard && react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "semistandard"
   },
   "dependencies": {
     "jquery": "^3.3.1",
