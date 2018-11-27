@@ -47,13 +47,13 @@ The prototype for this site can be viewed [here](https://preview.uxpin.com/84f9e
 
 ## Development
 
-Open a new terminal tab and run `gulp`. This will launch the project on your
-local machine, compile your sass files, and minify your css files.
+Open a new terminal tab and run `npm start`. This will launch the project on your local machine, compile your sass files, and minify your css files.
 
 
 ## Built With
 
 - [ReactJS](https://reactjs.org/) - JavaScript Library
+- [React Router](https://reacttraining.com/react-router/web/guides/philosophy)  
 - [Sass](https://rometools.github.io/rome/) - CSS Preprocessor
 - [Google Analytics](https://github.com/fknussel/react-router-ga) - Analytics tracking
 
