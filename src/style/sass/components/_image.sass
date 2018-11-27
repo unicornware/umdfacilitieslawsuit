@@ -1,0 +1,58 @@
+/* IMAGE COMPONENT STYLES
+
+.section-img,
+.section-img > img,
+figcaption
+  width: 100%
+
+.section-img
+  +respond-to(schmedium)
+    margin-bottom: px-to-em(17)
+
+
+  align-self: center
+  border-bottom: 0.5px solid $med2
+  margin: px-to-em(17) 0 px-to-em(17 * 2)
+
+  &.inactive
+    height: 0
+    opacity: 0
+    width: 0
+
+  &.active
+    height: auto
+    opacity: 1
+    width: 100%
+
+figcaption
+  .credit
+    +respond-to(schmedium)
+      font-size: px-to-em(13)
+
+
+    +respond-to(small)
+      font-size: px-to-em(12)
+
+
+    display: block
+    color: $dark
+    font:
+      size: px-to-em(14)
+      weight: 600
+    margin: 0 0 px-to-em(17)
+
+    a
+      color: $accent
+
+.caption
+  +respond-to(schmedium)
+    font-size: px-to-em(14)
+
+
+  +respond-to(small)
+    font-size: px-to-em(13)
+
+
+  color: $med
+  font-style: italic
+  margin: px-to-em(5) 0

@@ -1,0 +1,33 @@
+/* SECTION COMPONENT STYLES
+
+$section-heading-color: $accent
+
+.section
+  margin-bottom: px-to-em(34)
+
+.section-content
+  +flex(column)
+
+.section-heading
+  color: $section-heading-color
+  font:
+    family: font-stack-special
+    size: px-to-em(18)
+    weight: 700
+  text-transform: uppercase
+
+.section-graf
+  font-size: px-to-em(15)
+
+  +respond-to(schmedium)
+    font-size: px-to-em(13)
+
+
+  margin: 0 0 px-to-em(20)
+
+.section:last-of-type
+  .section-content > .section-graf:last-of-type
+    color: $accent
+    font:
+      size: px-to-em(20)
+      weight: 700

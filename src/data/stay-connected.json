@@ -1,0 +1,83 @@
+{
+  "ID": 16,
+  "name": "stay-connected",
+  "slug": "stay-connected",
+  "description": "",
+  "count": 4,
+  "items": [
+    {
+      "id": 34,
+      "order": 1,
+      "parent": 0,
+      "title": "Facebook",
+      "url": "https://www.facebook.com/TheDiamondback/",
+      "attr": "",
+      "target": "",
+      "classes": "nav-link social-nav-link",
+      "xfn": "",
+      "description": "",
+      "object_id": 34,
+      "object": "custom",
+      "object_slug": "facebook",
+      "type": "custom",
+      "type_label": "Custom Link"
+    },
+    {
+      "id": 40,
+      "order": 2,
+      "parent": 0,
+      "title": "Twitter",
+      "url": "https://twitter.com/thedbk",
+      "attr": "",
+      "target": "",
+      "classes": "nav-link social-nav-link",
+      "xfn": "",
+      "description": "",
+      "object_id": 40,
+      "object": "custom",
+      "object_slug": "twitter",
+      "type": "custom",
+      "type_label": "Custom Link"
+    },
+    {
+      "id": 41,
+      "order": 3,
+      "parent": 0,
+      "title": "Instagram",
+      "url": "https://www.instagram.com/thedbk/",
+      "attr": "",
+      "target": "",
+      "classes": "nav-link social-nav-link",
+      "xfn": "",
+      "description": "",
+      "object_id": 41,
+      "object": "custom",
+      "object_slug": "instagram",
+      "type": "custom",
+      "type_label": "Custom Link"
+    },
+    {
+      "id": 42,
+      "order": 4,
+      "parent": 0,
+      "title": "YouTube",
+      "url": "https://www.youtube.com/user/DiamondbackVideo",
+      "attr": "",
+      "target": "",
+      "classes": "nav-link social-nav-link",
+      "xfn": "",
+      "description": "",
+      "object_id": 42,
+      "object": "custom",
+      "object_slug": "youtube",
+      "type": "custom",
+      "type_label": "Custom Link"
+    }
+  ],
+  "meta": {
+    "links": {
+      "collection": "http://52.207.216.69/wp-json/wp/v2/menus/",
+      "self": "http://52.207.216.69/wp-json/wp/v2/menus/16"
+    }
+  }
+}

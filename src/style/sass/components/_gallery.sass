@@ -1,0 +1,39 @@
+/* GALLERY COMPONENT STYLES
+
+.gallery
+  +flex(column, center)
+
+.gallery-img
+  .section-img
+    display: none
+    height: 0
+    opacity: 0
+    width: 0
+
+  &.active
+    .section-img
+      display: block
+      height: auto
+      opacity: 1
+      width: 100%
+
+.gallery-navigation
+  +flex(row, center, space-between)
+
+  margin: 0 0 px-to-em(17 * 2)
+
+.gallery-nav-link
+  background-color: $med2
+  border: none
+  border-radius: 50%
+  height: px-to-em(14)
+  margin: 0 px-to-em(20)
+  width: px-to-em(14)
+
+  &:hover,
+  &.active
+    background-color: $accent
+    border: 3px solid $dark
+
+  &:hover
+    cursor: pointer

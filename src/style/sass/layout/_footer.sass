@@ -1,0 +1,125 @@
+/* FOOTER STYLES
+
+$footer-border: px-to-em(0.5) solid $med
+$footer-font-size: px-to-em(14)
+$footer-link-margin: 0 0 0 1em
+
+footer
+  border-top: $footer-border
+  padding: px-to-em(17 * 2) 0
+  width: 100vw
+
+  .container
+    +flex(column)
+
+.footer-title,
+.footer-column-link,
+.footer-list-link
+  font-size: $footer-font-size
+
+.footer-title,
+.footer-column-link
+  font-weight: 700
+
+.categories
+  +flex(row, flex-start, space-between)
+  +respond-to(schmedium)
+    flex-direction: column
+
+
+  border-bottom: $footer-border
+  padding-bottom: px-to-em(17)
+  width: 100%
+
+.footer-column-link
+  color: $accent
+
+.footer-list-link
+  color: $dark
+  font-weight: 400
+
+  &:hover
+    font-weight: 600
+
+  &:not(:first-of-type)
+    margin: $footer-link-margin
+
+.contact-title-link
+  color: $accent !important
+  font:
+    size: $footer-font-size
+    weight: 700 !important
+  margin-bottom: 0
+
+.contact-phone
+  font-size: $footer-font-size
+
+  &:not(:last-of-type)
+    margin: 0 0 0.5em
+
+  a
+    color: $dark
+    font-weight: 700
+
+.stay-connected-copyright
+  +flex(row, flex-end, space-between)
+  +respond-to(schmedium)
+    +flex(column, flex-start, space-between)
+
+
+  font-size: $footer-font-size
+  margin-top: 1em
+
+  a
+    color: $dark
+
+    &:hover
+      color: $accent
+
+.stay-connected
+  +flex(row, baseline, flex-start)
+
+  +respond-to(schmedium)
+    flex-direction: column
+    align-items: stretch
+
+
+  p,
+  .nav-link:not(:last-of-type)
+    margin: 0 0.5em 0 0
+
+  p,
+  .nav-link
+    +respond-to(schmedium)
+      margin: 0
+
+  p
+    font-weight: 700
+
+  .nav-link:hover
+    color: $accent
+
+.copyright
+  +flex(column, flex-end, flex-start)
+  +respond-to(schmedium)
+    align-items: flex-start
+    margin-top: 1em
+
+
+  color: $dark
+  font-weight: 700
+
+  &:hover
+    font-weight: 700
+
+.copyright-lab
+  margin-bottom: px-to-em(5)
+
+.copyright-lex
+  color: rgba($med, 0.85)
+
+  &:hover
+    color: $accent
+
+  a
+    color: rgba($med, 0.85)

@@ -5,12 +5,10 @@ import * as React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 // test menu data
-import megaMenu from '../../config/mega-menu.json';
-import stayConnected from '../../config/stay-connected.json';
+import footerMenu from '../../data/footer.json';
+import stayConnected from '../../data/stay-connected.json';
 
 /* eslint-disable space-before-function-paren */
-/* eslint-disable prefer-promise-reject-errors */
-/* eslint-disable no-unused-vars */
 
 /**
  * Footer class. Renders the footer The footer contains the mega menu (with
@@ -22,7 +20,7 @@ export default class Footer extends React.Component {
     super(props);
     this.state = {
       menuTypes: ['mega', 'stay-connected'],
-      megaMenu: megaMenu.items,
+      footerMenu: footerMenu.items,
       stayConnected: stayConnected.items
     };
   }
@@ -45,16 +43,18 @@ export default class Footer extends React.Component {
    * categories), contact information, the stay connected menu, and copyright.
    */
   render() {
-    const { megaMenu, stayConnected } = this.state;
+    const { footerMenu, stayConnected } = this.state;
 
     return (
       <footer>
         <div className='container'>
+
+          <p className='footer-title'>Enjoyed this story? Keep reading.</p>
+
           {/* categories */}
-          <p className='footer-title'>Categories</p>
-          <div className='categories row'>
+          <div className='categories'>
             {
-              megaMenu.map((category, index) =>
+              footerMenu.map((category, index) =>
                 <ul
                   className='footer-column'
                   id={this.getColumnId(category.title)}
@@ -63,29 +63,23 @@ export default class Footer extends React.Component {
                   <NavLink to={category.url} className={category.classes}>
                     {category.title}
                   </NavLink>
-                  <div className='sub-links'>
+                  <React.Fragment>
                     {category.children.map(link =>
                       <li key={link.title.trim().toLowerCase()}>
                         <FooterLink {...link} />
                       </li>
                     )}
-                  </div>
+                  </React.Fragment>
                 </ul>
               )
             }
           </div>
-          <hr class='horizontalrule' />
+
           {/* contact info */}
           <div className='contact'>
-            <p className='title-link'>
+            <p className='contact-title-link'>
               Contact Us
             </p>
-            <address>
-              3150 South Campus Dining Hall<br />
-              University of Maryland<br />
-              College Park, MD 20742<br />
-            </address>
-            <br />
 
             <p className='contact-phone'>
               <span>Newsroom</span>:{' '}
@@ -111,11 +105,22 @@ export default class Footer extends React.Component {
               {stayConnected.map(link => <FooterLink {...link} />)}
             </div>
 
-            <Link
-              to='http://www.dbknews.com/'
-              className='copyright'>
-              &copy; 2018 The Diamondback
-            </Link>
+            <div className='copyright'>
+              <Link
+                to='http://www.dbknews.com/'
+                className='copyright-lab'>
+                &copy; 2018 The Diamondback
+              </Link>
+
+              <span className='copyright-lex'>
+                Designed and Developed by&nbsp;
+                <Link
+                  to='http://lexusdrumgold.com/'
+                >
+                  Lexus Drumgold
+                </Link>
+              </span>
+            </div>
           </div>
         </div>
       </footer>

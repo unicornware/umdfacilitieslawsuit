@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// contains all global sass mixins
+// -----------------------------------------------------------------------------
+
+/// animation mixin for common animation properties
+/// @param {custom-ident} $name - animation-name
+/// @param {duration} $duration [1.25s] - animation-duration in seconds
+/// @param {timing-function} $timing [ease] - animation-timing-function
+/// @param {duration} $delay [0s] - animation-delay in seconds
+=animation($name, $duration: 1.25s, $timing: ease, $delay: 0s)
+  animation: $name $duration $timing $delay
+
+/// display flex mixin
+/// @param {ident} $flexDirection [row] - flex-direction
+/// @param {ident} $alignItems [stretch] - align-items
+/// @param {ident} $justifyContent [flex-start] - justify-content
+=flex($flexDirection: row, $alignItems: stretch, $justifyContent: flex-start)
+  display: flex
+  flex-direction: $flexDirection
+  align-items: $alignItems
+  justify-content: $justifyContent
+
+  @content
+
+/// bundles &:hover, &:active, and &:focus
+=hocus
+  &:hover,
+  &:active,
+  &:focus
+    @content
+
+/// keyframes mixin
+/// @param {custom-ident} $name - name of animation
+=keyframes($name)
+  @keyframes #{$name}
+    @content
+
+/// media query mixin
+/// @param {string | length} $breakpoint - name of breakpoint or value
+/// @param {string} [max] - max- or min- width/height
+/// @param {string} [width] - adjust width or height
+=respond-to($breakpoint, $bound: max, $dimension: width)
+  @if type-of($breakpoint) == string
+    $breakpoint: breakpoint($breakpoint)
+
+  @if $bound == min
+    @if $dimension == height
+      @media all and (min-height: $breakpoint)
+        @content
+    @else
+      @media all and (min-width: $breakpoint)
+        @content
+  @else
+    @if $dimension == height
+      @media all and (max-height: $breakpoint)
+        @content
+    @else
+      @media all and (max-width: $breakpoint)
+        @content
+
+/// sets the initial background color of an element and the element's
+/// background color when it is hovered over.
+/// @param {color} $color - initial background color
+/// @param {color} $hoverColor [darken($color, 5%)] - hover background color
+=set-bkg-color-and-hover($color, $hoverColor: darken($color, 5%))
+  background-color: $color
+
+  &:hover
+    background-color: $hoverColor
+
+/// background image mixin
+/// @param {string} $filename - name of image file with extension
+/// @param {position} $pos [center center] - background-position
+/// @param {ident} $repeat [no-repeat] - background-repeat
+/// @param {ident} $size [cover] - background-size
+=set-bkg-img($filename, $pos: center center, $repeat: no-repeat, $size: cover)
+  background:
+    image: url(asset('#{$filename}'))
+    position: $pos
+    repeat: $repeat
+    size: $size
+
+  @content
+
+/// mixin for transitions
+/// @param {ident} $property [all] - transition-property
+/// @param {duration} $duration [.25s] - transition-duration
+/// @param {timing-function} $timing [ease] - transition-timing
+/// @param {duration} $delay [0] - transition-delay
+=transition($property: all, $duration: 0.25s, $timing: ease, $delay: 0s)
+  transition: $property $duration $timing $delay
