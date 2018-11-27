@@ -9,9 +9,11 @@ The project is both a close look at their case and a narrative about how the str
 
 #### Overview
 [Getting Started](#gettingstarted)  
+[Design](#design)  
 [Development](#development)  
 [Deployment](#deployment)  
 [Built With](#builtwith)  
+[Issues](#issues) 
 
 ## Getting Started
 
@@ -39,6 +41,10 @@ Follow the steps below to get your development enviroment set up.
 
     in the terminal. This will install the necessary dependencies for the project. A list of those dependencies can be found in `package.json`.
 
+## Design
+
+The prototype for this site can be viewed [here](https://preview.uxpin.com/84f9eee7b6d7c2880279678be0de4bcc16ef7e30#/pages/98489984/documentation/no-panels).
+
 ## Development
 
 Open a new terminal tab and run `gulp`. This will launch the project on your
@@ -47,5 +53,9 @@ local machine, compile your sass files, and minify your css files.
 
 ## Built With
 
+- [ReactJS](https://reactjs.org/) - JavaScript Library
 - [Sass](https://rometools.github.io/rome/) - CSS Preprocessor
 - [Google Analytics](https://github.com/fknussel/react-router-ga) - Analytics tracking
+
+## Issues
+Designed and developed by [Lexus Drumgold](https://lexusdrumgold.com/) from [The Diamondback Lab](https://github.com/The-Diamondback-Lab); please get in contact with Lex if you have any comments or concerns. 
