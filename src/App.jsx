@@ -15,6 +15,7 @@ import Loading from './jsx/components/Loading.jsx';
 
 // layout components
 import Landing from './jsx/layout/Landing.jsx';
+import Navigation from './jsx/layout/Navigation.jsx';
 import Story from './jsx/layout/Story.jsx';
 import Footer from './jsx/layout/Footer.jsx';
 
@@ -29,6 +30,7 @@ export default class App extends React.Component {
     return (
       <BrowserRouter>
         <Analytics id={GOOGLE_ANALYTICS_ID} debug>
+          <Navigation />
           <Landing />
           <Story />
           <Footer />

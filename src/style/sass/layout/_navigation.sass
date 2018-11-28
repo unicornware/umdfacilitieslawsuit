@@ -1,1 +1,90 @@
 /* NAVIGATION LAYOUT COMPONENT STYLES
+
+nav .container,
+.navigation-link
+  +flex(column, center, center)
+
+nav
+  +respond-to(schmedium)
+    background-color: $dark
+    padding: 1em 0
+    right: 0
+    top: 0
+    width: 100vw
+
+
+  position: fixed
+  right: 1.25%
+  top: px-to-em(85)
+  z-index: 5
+
+  .container
+    +respond-to(schmedium)
+      flex-direction: row
+      justify-content: space-between
+
+.navigation-link
+  +respond-to(schmedium, min)
+    &:hover
+      p
+        display: block
+        height: auto
+        opacity: 1
+        width: 100%
+
+    p
+      display: none
+      height: 0
+      opacity: 0
+      order: 3
+      text-align: center
+      width: 0
+
+
+  p
+    color: $accent
+    font-size: px-to-em(12)
+    margin: 3.5px 0 0 0
+    text-align: center
+
+    +respond-to(small)
+      display: none
+      height: 0
+      opacity: 0
+      width: 0
+
+.navigation-link-circle
+  +respond-to(schmedium)
+    border: 3px solid $med
+    margin: 0
+
+    &.active,
+    &:hover
+      background-color: transparent !important
+      border-color: $accent
+
+      + p
+        color: $accent
+
+
+  background-color: transparent
+  border: 3px solid $accent
+  border-radius: 50%
+  height: px-to-em(14)
+  margin: 0 px-to-em(20)
+  width: px-to-em(14)
+
+  + p
+    color: $med
+
+  &.active,
+  &:hover
+    background-color: $accent
+
+.navigation-link-line
+  +respond-to(schmedium)
+    height: 0
+
+
+  height: px-to-em(50)
+  border-left: 1px solid $med2

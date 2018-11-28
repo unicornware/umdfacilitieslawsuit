@@ -94,8 +94,6 @@ input {
   .gallery-nav-link:hover, .gallery-nav-link.active {
     background-color: #e51d37;
     border: 3px solid black; }
-  .gallery-nav-link:hover {
-    cursor: pointer; }
 
 /* IMAGE COMPONENT STYLES */
 .section-img,
@@ -147,8 +145,8 @@ figcaption .credit {
 
 /* LOADING COMPONENT STYLES */
 /* SECTION COMPONENT STYLES */
-.section {
-  margin-bottom: 2.125em; }
+.spacer br:last-of-type {
+  margin-bottom: 1em; }
 
 .section-content {
   display: flex;
@@ -306,12 +304,8 @@ footer {
   align-items: flex-start;
   justify-content: flex-end;
   height: 100vh;
-  margin-bottom: 5.3125em;
   padding-bottom: 5.3125em;
   width: 100vw; }
-  @media all and (max-width: 48em) {
-    .landing {
-      margin-bottom: 3.1875em; } }
   .landing h1, .landing h2 {
     margin: 0; }
   .landing h1 {
@@ -357,6 +351,84 @@ footer {
       color: #e51d37; }
 
 /* NAVIGATION LAYOUT COMPONENT STYLES */
+nav .container,
+.navigation-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+nav {
+  position: fixed;
+  right: 1.25%;
+  top: 5.3125em;
+  z-index: 5; }
+  @media all and (max-width: 48em) {
+    nav {
+      background-color: black;
+      padding: 1em 0;
+      right: 0;
+      top: 0;
+      width: 100vw; } }
+  @media all and (max-width: 48em) {
+    nav .container {
+      flex-direction: row;
+      justify-content: space-between; } }
+
+@media all and (min-width: 48em) {
+  .navigation-link:hover p {
+    display: block;
+    height: auto;
+    opacity: 1;
+    width: 100%; }
+  .navigation-link p {
+    display: none;
+    height: 0;
+    opacity: 0;
+    order: 3;
+    text-align: center;
+    width: 0; } }
+
+.navigation-link p {
+  color: #e51d37;
+  font-size: 0.75em;
+  margin: 3.5px 0 0 0;
+  text-align: center; }
+  @media all and (max-width: 30em) {
+    .navigation-link p {
+      display: none;
+      height: 0;
+      opacity: 0;
+      width: 0; } }
+
+.navigation-link-circle {
+  background-color: transparent;
+  border: 3px solid #e51d37;
+  border-radius: 50%;
+  height: 0.875em;
+  margin: 0 1.25em;
+  width: 0.875em; }
+  @media all and (max-width: 48em) {
+    .navigation-link-circle {
+      border: 3px solid #9b9b9b;
+      margin: 0; }
+      .navigation-link-circle.active, .navigation-link-circle:hover {
+        background-color: transparent !important;
+        border-color: #e51d37; }
+        .navigation-link-circle.active + p, .navigation-link-circle:hover + p {
+          color: #e51d37; } }
+  .navigation-link-circle + p {
+    color: #9b9b9b; }
+  .navigation-link-circle.active, .navigation-link-circle:hover {
+    background-color: #e51d37; }
+
+.navigation-link-line {
+  height: 3.125em;
+  border-left: 1px solid #dedede; }
+  @media all and (max-width: 48em) {
+    .navigation-link-line {
+      height: 0; } }
+
 /* STORY LAYOUT COMPONENT STYLES */
 .story {
   padding-bottom: 5.3125em; }
