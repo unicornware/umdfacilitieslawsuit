@@ -14,21 +14,27 @@ footer
 
 .footer-title,
 .footer-column-link,
-.footer-list-link
+.footer-list-link,
+.editors
   font-size: $footer-font-size
 
 .footer-title,
 .footer-column-link
   font-weight: 700
 
-.categories
+.footer-column:not(:last-of-type)
+  +respond-to(schmedium)
+    margin-bottom: px-to-em(17)
+
+.categories,
+.contact-editors
   +flex(row, flex-start, space-between)
   +respond-to(schmedium)
     flex-direction: column
 
-
+.categories
   border-bottom: $footer-border
-  padding-bottom: px-to-em(17)
+  padding-bottom: px-to-em(17 * 2)
   width: 100%
 
 .footer-column-link
@@ -44,12 +50,19 @@ footer
   &:not(:first-of-type)
     margin: $footer-link-margin
 
+.contact-editors
+  padding-top: px-to-em(17 * 2)
+
+.editors
+  +respond-to(schmedium, min)
+    text-align: right
+
 .contact-title-link
   color: $accent !important
   font:
     size: $footer-font-size
     weight: 700 !important
-  margin-bottom: 0
+  margin: 0
 
 .contact-phone
   font-size: $footer-font-size
@@ -75,6 +88,11 @@ footer
 
     &:hover
       color: $accent
+
+.editors
+  span
+    color: $accent
+    font-weight: 600
 
 .stay-connected
   +flex(row, baseline, flex-start)

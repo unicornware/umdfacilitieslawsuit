@@ -25,7 +25,9 @@ h6 {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Helvetica Neue, Open Sans; }
 
 a,
-p {
+p,
+dl,
+ul {
   font-family: "IBM Plex Sans", Arial; }
 
 a:hover, a:active, a:focus,
@@ -40,6 +42,7 @@ a {
     font-weight: 600; }
 
 ul {
+  margin: 0;
   padding: 0; }
 
 li {
@@ -51,6 +54,9 @@ button {
 
 input {
   outline: none; }
+
+dd {
+  margin: 0; }
 
 /* HELPER CLASSES - BASE/HELPERS */
 .container {
@@ -186,24 +192,33 @@ footer {
 
 .footer-title,
 .footer-column-link,
-.footer-list-link {
+.footer-list-link,
+.editors {
   font-size: 0.875em; }
 
 .footer-title,
 .footer-column-link {
   font-weight: 700; }
 
-.categories {
+@media all and (max-width: 48em) {
+  .footer-column:not(:last-of-type) {
+    margin-bottom: 1.0625em; } }
+
+.categories,
+.contact-editors {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
-  border-bottom: 0.03125em solid #9b9b9b;
-  padding-bottom: 1.0625em;
-  width: 100%; }
+  justify-content: space-between; }
   @media all and (max-width: 48em) {
-    .categories {
+    .categories,
+    .contact-editors {
       flex-direction: column; } }
+
+.categories {
+  border-bottom: 0.03125em solid #9b9b9b;
+  padding-bottom: 2.125em;
+  width: 100%; }
 
 .footer-column-link {
   color: #e51d37; }
@@ -216,11 +231,18 @@ footer {
   .footer-list-link:not(:first-of-type) {
     margin: 0 0 0 1em; }
 
+.contact-editors {
+  padding-top: 2.125em; }
+
+@media all and (min-width: 48em) {
+  .editors {
+    text-align: right; } }
+
 .contact-title-link {
   color: #e51d37 !important;
   font-size: 0.875em;
   font-weight: 700 !important;
-  margin-bottom: 0; }
+  margin: 0; }
 
 .contact-phone {
   font-size: 0.875em; }
@@ -247,6 +269,10 @@ footer {
     color: black; }
     .stay-connected-copyright a:hover {
       color: #e51d37; }
+
+.editors span {
+  color: #e51d37;
+  font-weight: 600; }
 
 .stay-connected {
   display: flex;

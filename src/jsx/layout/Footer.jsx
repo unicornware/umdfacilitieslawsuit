@@ -76,26 +76,42 @@ export default class Footer extends React.Component {
           </div>
 
           {/* contact info */}
-          <div className='contact'>
-            <p className='contact-title-link'>
-              Contact Us
-            </p>
+          <div className='contact-editors'>
 
-            <p className='contact-phone'>
-              <span>Newsroom</span>:{' '}
-              <Link to='tel:+3013148200'>301-314-8200</Link><br />
-              <span className='hours'>
-                (4:30 p.m. to midnight, Sundays through Thursdays)
-              </span>
-            </p>
+            <div className='contact'>
+              <p className='contact-title-link'>
+                Contact Us
+              </p>
 
-            <p className='contact-phone'>
-              <span>Advertising</span>:{' '}
-              <Link to='tel:+3013148000'>301-314-8000</Link><br />
-              <span className='hours'>
-                (normal business hours, Mondays through Fridays)
-              </span>
-            </p>
+              <dl className='contact-phone'>
+                <dt>
+                  <span>Newsroom</span>:{' '}
+                  <Link to='tel:+3013148200'>301-314-8200</Link><br />
+                </dt>
+                <dd className='hours'>
+                  (4:30 p.m. to midnight, Sundays through Thursdays)
+                </dd>
+              </dl>
+
+              <dl className='contact-phone'>
+                <dt>
+                  <span>Advertising</span>:{' '}
+                  <Link to='tel:+3013148000'>301-314-8000</Link><br />
+                </dt>
+                <dd>
+                  <span className='hours'>
+                    (normal business hours, Mondays through Fridays)
+                  </span>
+                </dd>
+              </dl>
+            </div>
+
+            <ul className='editors'>
+              <span>Editors</span>
+              <li>Ryan Romano</li>
+              <li>Christine Condon</li>
+              <li>Jillian Atelsek</li>
+            </ul>
           </div>
 
           {/* social links and copyright */}
