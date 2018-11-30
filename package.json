@@ -2,7 +2,6 @@
   "name": "umd-racial-discrimination",
   "description": "This story is an in-depth feature on two electricians — DuRay Jones and Michael Bell — who are suing UMD for racial discrimination. They filed their lawsuit in federal court last summer, but besides an initial story with the basic facts from the court documents, no one has really reported on what drove them to file or what the process has been like for them. The project is both a close look at their case and a narrative about how the stress of it has affected their home lives and mental health.",
   "version": "1.0.0",
-  "homepage": "https://github.com/The-Diamondback-Lab/umd-racial-discrimination#README",
   "bugs": {
     "url": "https://github.com/The-Diamondback-Lab/umd-racial-discrimination/issues"
   },
@@ -10,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/The-Diamondback-Lab/umd-racial-discrimination"
   },
+  "main": "build/index.html",
   "scripts": {
     "build-css": "node-sass-chokidar src/style/sass/ -o src/style/css/",
     "watch-css": "npm run build-css && node-sass-chokidar src/style/sass/ -o src/style/css/ --watch --recursive",
@@ -17,6 +17,7 @@
     "build-js": "react-scripts build",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm-run-all build-css build-js",
+    "deploy": "git push heroku master",
     "test": "semistandard && react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
@@ -31,8 +32,7 @@
     "react-router-ga": "^1.0.0",
     "react-router-hash-link": "^1.2.1",
     "react-scripts": "^1.1.5",
-    "reactn": "^0.1.0",
-    "semantic": "0.0.1"
+    "reactn": "^0.1.0"
   },
   "private": true,
   "browserslist": {

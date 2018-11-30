@@ -49,6 +49,35 @@ The prototype for this site can be viewed [here](https://preview.uxpin.com/84f9e
 
 Open a new terminal tab and run `npm start`. This will launch the project on your local machine, compile your sass files, and minify your css files.
 
+### Deployment
+
+#### [Github Integration](https://devcenter.heroku.com/articles/github-integration)
+When ready to deploy, commit and push your changes. If [automatic deploys](https://devcenter.heroku.com/articles/github-integration#automatic-deploys) are enabled, then Heroku will build and deploy all pushes to the specified branch.
+
+#### [With Git](https://devcenter.heroku.com/articles/git)
+##### For a new Heroku app
+Run the following command `heroku create <name>`.  
+
+This will create a new Heroku application titled _name_.
+    
+##### For an existing Heroku app
+Run the following command `heroku git:remote -a umdracialdiscrimination`.  
+
+This adds a remote to your local repository.
+
+When ready to deloy, 
+
+1. Run the command `npm run build`.
+
+2. Add and commit your changes using the command `git commit -am "<YOUR
+   MESSAGE>"`.
+
+3. Run the command `npm run deploy` or `git push heroku master`.  
+    
+
+To deploy a non master branch, run the command `git push heroku <non-master-branch-name>:master`.  
+
+This will to the remote’s master branch.
 
 ## Built With
 
