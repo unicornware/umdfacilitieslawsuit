@@ -22,6 +22,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "babel-eslint": "^10.0.1",
     "jquery": "^3.3.1",
     "merge": "^1.2.1",
     "node-sass-chokidar": "^1.3.3",
