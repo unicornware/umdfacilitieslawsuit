@@ -1,11 +1,11 @@
-// NOTICE: importing reactn instead of react
-import React, { setGlobal } from 'reactn';
+import * as React from 'react';
 
 // components
 import Gallery from './Gallery';
 import Image from './Image';
 
 /* eslint-disable space-before-function-paren */
+/* eslint-disable array-callback-return */
 
 export default class Section extends React.Component {
   render() {
@@ -37,9 +37,6 @@ export default class Section extends React.Component {
                 }
               }
             })}
-          </div>
-          <div className='section-divider'>
-            {/* empty for now */}
           </div>
         </div>
       </React.Fragment>

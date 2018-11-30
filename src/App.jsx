@@ -1,3 +1,7 @@
+/* eslint-disable space-before-function-paren */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+
 // NOTICE: importing reactn instead of react
 import React, { setGlobal } from 'reactn';
 
@@ -21,9 +25,6 @@ import Footer from './jsx/layout/Footer.jsx';
 
 // style
 import './style/css/app.css';
-
-/* eslint-disable space-before-function-paren */
-/* eslint-disable no-undef */
 
 export default class App extends React.Component {
   render() {

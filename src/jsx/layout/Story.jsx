@@ -1,5 +1,4 @@
-// NOTICE: importing reactn instead of react
-import React, { setGlobal } from 'reactn';
+import * as React from 'react';
 
 // data
 import sections from '../../data/sections.json';
@@ -8,6 +7,7 @@ import sections from '../../data/sections.json';
 import Section from '../components/Section';
 
 /* eslint-disable space-before-function-paren */
+/* eslint-disable array-callback-return */
 
 export default class Story extends React.Component {
   render() {

@@ -1,7 +1,7 @@
-// NOTICE: importing reactn instead of react
-import React, { setGlobal } from 'reactn';
+import * as React from 'react';
 
 /* eslint-disable space-before-function-paren */
+/* eslint-disable no-undef */
 
 export default class Loading extends React.Component {
   render() {

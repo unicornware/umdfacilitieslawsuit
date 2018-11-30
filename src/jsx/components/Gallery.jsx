@@ -8,6 +8,7 @@ import Image from './Image';
 
 /* eslint-disable space-before-function-paren */
 /* eslint-disable no-undef */
+/* eslint-disable jsx-a11y/anchor-has-content */
 
 export default class Gallery extends React.Component {
   render() {

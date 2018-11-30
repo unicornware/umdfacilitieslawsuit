@@ -1,13 +1,9 @@
-// NOTICE: importing reactn instead of react
-import React, { setGlobal } from 'reactn';
+import * as React from 'react';
 
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 // jquery
 import $ from 'jquery';
-
-// breakpoints
-import { BREAKPOINTS } from '../../config/variables.config';
 
 // sections
 import sections from '../../data/sections.json';
