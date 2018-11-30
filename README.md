@@ -8,11 +8,11 @@ The project is both a close look at their case and a narrative about how the str
 
 
 #### Overview
-[Getting Started](#gettingstarted)  
+[Getting Started](#getting-started)  
 [Design](#design)  
 [Development](#development)  
 [Deployment](#deployment)  
-[Built With](#builtwith)  
+[Built With](#built-with)  
 [Issues](#issues) 
 
 ## Getting Started
@@ -78,6 +78,8 @@ When ready to deloy,
 To deploy a non master branch, run the command `git push heroku <non-master-branch-name>:master`.  
 
 This will to the remote’s master branch.
+
+Once deployed, the site can be viewed [here](https://umdracialdiscrimination.herokuapp.com/).
 
 ## Built With
 
