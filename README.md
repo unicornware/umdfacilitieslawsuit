@@ -88,4 +88,4 @@ Once deployed, the site can be viewed [here](https://umdracialdiscrimination.her
 - [Google Analytics](https://github.com/fknussel/react-router-ga) - Analytics tracking
 
 ## Issues
-Designed and developed by [Lexus Drumgold](https://lexusdrumgold.com/) from [The Diamondback Lab](https://github.com/The-Diamondback-Lab); please get in contact with Lex if you have any comments or concerns. 
+Designed and developed by [Lexus Drumgold](https://lexusdrumgold.com/) from [The Diamondback Lab](https://github.com/The-Diamondback-Lab); please get in contact with Lex if you have any comments or concerns.
