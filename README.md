@@ -1,10 +1,10 @@
 # University of Maryland Racial Discrimination
 
-This story is an in-depth feature on two electricians — DuRay Jones and Michael Bell — who are suing UMD for racial discrimination. 
+> This story is an in-depth feature on two electricians — DuRay Jones and Michael Bell — who are suing UMD for racial discrimination. 
 
-They filed their lawsuit in federal court last summer, but besides an initial story with the basic facts from the court documents, no one has really reported on what drove them to file or what the process has been like for them.
+> They filed their lawsuit in federal court last summer, but besides an initial story with the basic facts from the court documents, no one has really reported on what drove them to file or what the process has been like for them.
 
-The project is both a close look at their case and a narrative about how the stress of it has affected their home lives and mental health. 
+> The project is both a close look at their case and a narrative about how the stress of it has affected their home lives and mental health. 
 
 
 #### Overview
