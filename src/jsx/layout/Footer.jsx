@@ -118,7 +118,7 @@ export default class Footer extends React.Component {
           <div className='stay-connected-copyright row'>
             <div className='stay-connected'>
               <p>Stay Connected</p>
-              {stayConnected.map(link => <FooterLink {...link} />)}
+              {stayConnected.map((link, i) => <FooterLink {...link} key={i} />)}
             </div>
 
             <div className='copyright'>

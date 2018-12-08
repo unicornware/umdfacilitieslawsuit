@@ -1,7 +1,9 @@
 // global variables
 
 // html elements
-const APP_ROOT = document.getElementById('app-root');
+const ROOT = {
+  app: document.getElementById('app')
+};
 
 // style
 const BREAKPOINTS = {
@@ -13,4 +15,11 @@ const BREAKPOINTS = {
   xlarge: 1440
 };
 
-export { APP_ROOT, BREAKPOINTS };
+const COLORS = {
+  dark: ['rgba(0, 0, 0, 1)', 'rgba(0, 0, 0, .75)'],
+  med: ['rgba(155, 155, 155, 1)', 'rgba(222, 222, 222, 1)'],
+  light: 'rgba(249, 250, 252, 1)',
+  accent: 'rgba(229, 29, 55, 1)'
+};
+
+export { ROOT, BREAKPOINTS, COLORS };

@@ -4,6 +4,7 @@
 
 // NOTICE: importing reactn instead of react
 import React, { setGlobal } from 'reactn';
+import * as ReactDOM from 'react-dom';
 
 // react router
 import { BrowserRouter } from 'react-router-dom';
@@ -12,6 +13,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Analytics from 'react-router-ga';
 
 // config
+import { ROOT } from './config/variables.config.js';
 import { GOOGLE_ANALYTICS_ID } from './config/secret.config.js';
 
 // components

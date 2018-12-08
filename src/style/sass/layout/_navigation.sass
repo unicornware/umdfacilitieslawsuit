@@ -1,8 +1,10 @@
 /* NAVIGATION LAYOUT COMPONENT STYLES
 
-nav .container,
-.navigation-link
-  +flex(column, center, center)
+#navigation
+  height: 100vh
+  position: fixed
+  width: 100vw
+  z-index: 5
 
 nav
   +respond-to(schmedium)
@@ -10,52 +12,74 @@ nav
     padding: 1em 0
     right: 0
     top: 0
-    width: 100vw
+    width: 100%
 
 
   position: fixed
-  right: 1.25%
+  right: 1%
   top: px-to-em(85)
-  z-index: 5
 
-  .container
+  > div
+    +flex(column, flex-end)
     +respond-to(schmedium)
-      flex-direction: row
-      justify-content: space-between
+      +flex(row, center, space-between)
+
+      overflow-x: scroll
+
+
+    max-width: $max-width
+
+    .fa-location-arrow
+      +respond-to(schmedium)
+        margin: 0 px-to-em(85 * 0.125) 0 0
+
+        // position: absolute
+
+
+      color: $accent
+      font-size: px-to-em(26)
+      margin: 0 px-to-em(10) px-to-em(12.5) 0
 
 .navigation-link
-  +respond-to(schmedium, min)
-    &:hover
-      p
-        display: block
-        height: auto
-        opacity: 1
-        width: 100%
+  +flex(row-reverse)
 
-    p
-      display: none
+  +respond-to(schmedium)
+    +flex(row)
+
+    margin: 0 px-to-em(85 * 0.25) 0 0
+
+    > p
+      font-size: px-to-em(10)
+      height: auto
+      opacity: 1
+      margin: 0 0 0 px-to-em(7.5)
+
+
+  .container
+    +flex(column, flex-end)
+
+  > div
+    +flex(column, center, center)
+    +respond-to(schmedium)
+      + p
+        height: auto !important
+        opacity: 1 !important
+        margin: 0 0 0 px-to-em(7.5)
+
+  > p
+    +respond-to(schmedium, min)
       height: 0
+      margin: 0
       opacity: 0
-      order: 3
-      text-align: center
-      width: 0
 
 
-  p
-    color: $accent
+    color: $med2
     font-size: px-to-em(12)
-    margin: 5px 0
     text-align: center
-
-    +respond-to(small)
-      display: none
-      height: 0
-      opacity: 0
-      width: 0
 
 .navigation-link-circle
   +respond-to(schmedium)
-    border: 3px solid $med
+    border: 3px solid $accent
     margin: 0
 
     &.active,

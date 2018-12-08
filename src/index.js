@@ -6,7 +6,7 @@ import * as ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 
 // config
-import { APP_ROOT } from './config/variables.config.js';
+import { ROOT } from './config/variables.config.js';
 
 // application
 import App from './App.jsx';
@@ -18,6 +18,6 @@ import App from './App.jsx';
  */
 
 // render Story
-ReactDOM.render(<App />, APP_ROOT);
+ReactDOM.render(<App />, ROOT.app);
 
 registerServiceWorker();
