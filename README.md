@@ -1,4 +1,4 @@
-# University of Maryland Racial Discrimination
+# University of Maryland Facilities Management Lawsuit
 
 This story is an in-depth feature on two electricians — DuRay Jones and Michael Bell — who are suing UMD for racial discrimination.  
 
@@ -29,7 +29,7 @@ Follow the steps below to get your development enviroment set up.
 1.  Pull the repo. Open the terminal and and run the following:
 
     ```
-    git clone https://github.com/The-Diamondback-Lab/umd-racial-discrimination.git
+    git clone https://github.com/The-Diamondback-Lab/umd-facilities-lawsuit.git
     ```
 
 2.  After cloning the repo, open the project. In the boilerplate-reactjs folder, run the following command:
