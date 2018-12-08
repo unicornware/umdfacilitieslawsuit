@@ -23,7 +23,7 @@ export default class Landing extends React.Component {
           </div>
 
           <div className='title'>
-            <h1>Racial Discrimination</h1>
+            <h1>Facilities Management Lawsuit</h1>
             <h2>University of Maryland</h2>
           </div>
 
