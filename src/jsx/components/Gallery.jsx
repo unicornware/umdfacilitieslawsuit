@@ -15,7 +15,7 @@ export default class Gallery extends React.Component {
     const { images } = this.props;
 
     return (
-      <div className='gallery' id='gallery'>
+      <div className='gallery sticky' id='gallery'>
         <div className='gallery-images'>
           {images.map((image, index) =>
             <GalleryImage image={image} index={index} key={index} />

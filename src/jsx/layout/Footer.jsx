@@ -42,7 +42,7 @@ export default class Footer extends React.Component {
     const { footerMenu, stayConnected } = this.state;
 
     return (
-      <footer>
+      <footer className='sticky'>
         <div className='container'>
           <p className='footer-title'>Enjoyed this story? Keep reading.</p>
 

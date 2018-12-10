@@ -30,7 +30,10 @@ export default class Navigation extends React.Component {
                   return (
                     <NavigationLink
                       id={s.id}
+<<<<<<< HEAD
                       heading={s.heading}
+=======
+>>>>>>> master
                       active={i === 0}
                       line={i !== 6}
                       index={i}
