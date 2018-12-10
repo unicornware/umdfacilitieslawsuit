@@ -1,6 +1,7 @@
 /* FONTS
  * FONTS.SASS */
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600,600i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
 /* GENERAL STYLES - BASE/COMMON */
 * {
   transition: all 0.25s ease 0s; }
@@ -14,7 +15,7 @@ html {
 
 body {
   background-color: #f9fafc;
-  font-family: "IBM Plex Sans", Arial;
+  font-family: "IBM Plex Sans", sans-serif;
   margin: 0; }
 
 a:hover, a:active, a:focus,
@@ -51,16 +52,12 @@ dd {
   max-width: 87.5%;
   width: 100%; }
 
-.sticky {
-  position: sticky; }
-
 /* GALLERY COMPONENT STYLES */
 .gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  z-index: 5; }
+  justify-content: flex-start; }
 
 .gallery-img .section-img {
   display: none;
@@ -144,8 +141,7 @@ figcaption .credit {
 footer {
   border-top: 0.03125em solid #dedede;
   padding: 2.125em 0;
-  width: 100vw;
-  z-index: 5; }
+  width: 100vw; }
   footer .container {
     display: flex;
     flex-direction: column;
@@ -161,6 +157,9 @@ footer {
 .footer-title,
 .footer-column-link {
   font-weight: 700; }
+
+.footer-title {
+  margin: 1.875em 0; }
 
 @media all and (max-width: 48em) {
   .footer-column:not(:last-of-type) {
@@ -195,10 +194,6 @@ footer {
 
 .contact-editors {
   padding-top: 2.125em; }
-
-@media all and (min-width: 48em) {
-  .editors {
-    text-align: right; } }
 
 .contact-title-link {
   color: #e51d37 !important;
@@ -239,10 +234,13 @@ footer {
   font-weight: 600; }
 
 .editors dl:not(:last-of-type) {
-  margin: 0 0 0.5em; }
+  margin: 0 0 0.375em; }
 
 .editors dl span {
   color: black; }
+
+.editors dl:last-of-type {
+  margin-bottom: 0; }
 
 .stay-connected {
   display: flex;
@@ -484,7 +482,8 @@ nav {
 
 .section-heading {
   color: #e51d37;
-  font-size: 1.5em;
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", sans-serif;
+  font-size: 1.25em;
   font-weight: 700;
   margin-top: 0;
   text-transform: uppercase; }

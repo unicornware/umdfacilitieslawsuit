@@ -58,7 +58,7 @@ class NavigationLink extends React.Component {
     super(props);
     this.state = {
       text: $(window).width() > BREAKPOINTS.schmedium
-        ? props.heading : `#${props.id.toUpperCase()}`
+        ? props.heading : `#${props.id.toUpperCase().replace('-', ' ')}`
     };
   }
 
@@ -92,7 +92,7 @@ class NavigationLink extends React.Component {
       if ($(window).width() > BREAKPOINTS.schmedium) {
         this.setState({ text: heading });
       } else {
-        this.setState({ text: `#${id.toUpperCase()}` });
+        this.setState({ text: `#${id.toUpperCase().replace('-', ' ')}` });
       }
     });
   }

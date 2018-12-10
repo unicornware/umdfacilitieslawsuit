@@ -8,7 +8,6 @@ footer
   border-top: $footer-border
   padding: px-to-em(17 * 2) 0
   width: 100vw
-  z-index: 5
 
   .container
     +flex(column)
@@ -22,6 +21,9 @@ footer
 .footer-title,
 .footer-column-link
   font-weight: 700
+
+.footer-title
+  margin: px-to-em(30) 0
 
 .footer-column:not(:last-of-type)
   +respond-to(schmedium)
@@ -56,7 +58,7 @@ footer
 
 .editors
   +respond-to(schmedium, min)
-    text-align: right
+    // text-align: right
 
 .contact-title-link
   color: $accent !important
@@ -101,10 +103,13 @@ footer
 
   dl
     &:not(:last-of-type)
-      margin: 0 0 0.5em
+      margin: 0 0 0.375em
 
     span
       color: $dark
+
+  dl:last-of-type
+    margin-bottom: 0
 
 .stay-connected
   +flex(row, baseline, flex-start)

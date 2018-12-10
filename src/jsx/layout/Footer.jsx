@@ -42,8 +42,22 @@ export default class Footer extends React.Component {
     const { footerMenu, stayConnected } = this.state;
 
     return (
-      <footer className='sticky'>
+      <footer>
         <div className='container'>
+          <div className='editors'>
+            <span>Editors</span>
+
+            <dl>
+              <dt><span>Project Editor</span></dt>
+              <dd>Christine Condon</dd>
+            </dl>
+
+            <dl>
+              <dt><span>Copy Editors</span></dt>
+              <dd>Daisy Grant, Arya Hodjat, Ryan Romano, Leah Brennan</dd>
+            </dl>
+          </div>
+
           <p className='footer-title'>Enjoyed this story? Keep reading.</p>
 
           {/* categories */}
@@ -88,19 +102,6 @@ export default class Footer extends React.Component {
               </dl>
             </div>
 
-            <div className='editors'>
-              <span>Editors</span>
-
-              <dl>
-                <dt><span>Project Editor</span></dt>
-                <dd>Christine Condon</dd>
-              </dl>
-
-              <dl>
-                <dt><span>Copy Editors</span></dt>
-                <dd>Daisy Grant, Arya Hodjat, Ryan Romano, Leah Brennan</dd>
-              </dl>
-            </div>
           </div>
 
           {/* social links and copyright */}

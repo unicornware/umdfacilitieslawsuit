@@ -10,6 +10,9 @@
         "p": "He quietly slipped out of his home in Southeast Washington, D.C., leaving his sleeping family behind, as he headed to the Arundel Mills casino more than an hour away for the third time that week. Tonight, he thought, could be the night he’d finally win enough."
       },
       {
+        "p": "He quietly slipped out of his home in Southeast Washington, D.C., leaving his sleeping family behind, as he headed to the Arundel Mills casino more than an hour away for the third time that week. Tonight, he thought, could be the night he’d finally win enough."
+      },
+      {
         "p": "Enough to ensure he’d never have to go back to his job at the University of Maryland."
       },
       {
@@ -70,7 +73,7 @@
     ]
   },
   {
-    "id": "home",
+    "id": "duray",
     "heading": "“He brought it home”",
     "content": [
       {
@@ -99,7 +102,7 @@
         }
       },
       {
-        "p": "“Where am I gonna run to?” he said. “I'm stuck. I don't have a choice but to fight these people."
+        "p": "“Where am I gonna run to?” he said. “I'm stuck. I don't have a choice but to fight these people.\""
       },
       {
         "p": "Though he said his upbringing often weighs on him, he hasn’t had any run-ins with the law for years."
@@ -123,7 +126,7 @@
         "p": "“This is the only person I trust, realistically, outside of blood,” Bell said, gesturing to Jones. “I’ll tell anybody — I trust this man with my life.”"
       },
       {
-        "p": "Despite the energy he poured into his case, though, Jones didn’t see things getting better. Every day, he steeled himself to go into work, only to feel the same hostility. Every night, he’d try in vain to figure out an effective way to fight back.”"
+        "p": "Despite the energy he poured into his case, though, Jones didn’t see things getting better. Every day, he steeled himself to go into work, only to feel the same hostility. Every night, he’d try in vain to figure out an effective way to fight back."
       },
       {
         "p": "In a 2013 memo sent to their supervisor from a Human Resources representative, the men were quoted as saying they were “rumored to be the ‘bad guys’” in their department after their complaint, which “resulted in elevating tensions to a point that the workplace has become even more hostile.”"
@@ -228,7 +231,7 @@
     ]
   },
   {
-    "id": "consumed",
+    "id": "michael",
     "heading": "“He was consumed”",
     "content": [
       {
@@ -268,12 +271,6 @@
         "p": "In their lawsuit, the men’s lawyer wrote that the claim in the memo was a lie, and that “after proper investigation and appeal, these lies were proven false and Plaintiff Bell was awarded his due Worker’s Compensation payment.”"
       },
       {
-        "p": "“You gotta walk on eggshells,” Bell said. “They were trying to make us out to be the black, violent [people] that you see on TV.”"
-      },
-      {
-        "p": "The process was exhausting and stressful, but it had one upside: It fostered a deep friendship between the two."
-      },
-      {
         "p": "The university denied this claim in the response they filed in court."
       },
       {
@@ -287,9 +284,6 @@
       },
       {
         "p": "He struggled to make ends meet and was eventually evicted from his apartment."
-      },
-      {
-        "p": "The university has denied these claims in court documents."
       },
       {
         "p": "Bell’s career options were limited, he said, due to his prior criminal conviction — carrying pistols without a license."
@@ -307,7 +301,7 @@
         "p": "Bell became so adept at maintaining the bookbag and managing his case, he considered pursuing a job as a paralegal — before remembering his background would likely disqualify him."
       },
       {
-        "p": "“Bell and Jones’ lawyer, Christal Edwards, said their careful record-keeping made her job easier. She said with a laugh that she’s “surprised they don’t have any kind of legal background.”"
+        "p": "Bell and Jones’ lawyer, Christal Edwards, said their careful record-keeping made her job easier. She said with a laugh that she’s “surprised they don’t have any kind of legal background.”"
       },
       {
         "p": "“This case would not be successful without them being so detailed and documented,” Edwards said."
@@ -361,7 +355,7 @@
     ]
   },
   {
-    "id": "waiting",
+    "id": "case",
     "heading": "“The waiting game”",
     "content": [
       {
@@ -371,7 +365,7 @@
         "p": "The men say they were often tasked with doing work on fire alarm systems that they weren’t certified for. Neither, they said, was Reisler, who had been brought on to be their “helper,” according to his hiring letter. Reisler said he worked on fire alarms and performed many other duties that were outside his job description."
       },
       {
-        "p": "Bell and Jones said they felt confident in their work, but they wanted Facilities to know that they didn’t have the training required to do it — and that if something were to go wrong, the university could be liable. Plus, fire alarm technicians — the people certified to do the work Bell and Jones were doing — were paid significantly more and offered greater benefits."
+        "p": "Bell and Jones said they felt confident in their work, but they wanted Facilities to know that they didn’t have the training required to do it — and that if something were to go wrong, the university could be liable. They also said the people supposed to do the work Bell and Jones were actually doing were paid more and offered greater autonomy. The pair felt they were being used as, in Jones’ words, “cheap labor.”"
       },
       {
         "p": "“All we ever wanted was to be compensated for what we did,” Jones said."
@@ -405,12 +399,15 @@
         "p": "By May 2014, the men said they were still completing fire alarm work — something that wouldn’t stop until June of that year, about 14 months after their concerns were first raised. And at that point, they also had to work in an environment where they felt ostracized and attacked by their managers and coworkers."
       },
       {
+        "p": "“All I did was try to make this place better,” Bell said."
+      },
+      {
         "p": "But when he tried, he felt like management would “turn around and use everything that you tell them against you.”"
       }
     ]
   },
   {
-    "id": "mess",
+    "id": "pushback",
     "heading": "“It’s a mess”",
     "content": [
       {
@@ -438,7 +435,7 @@
         "p": "In December 2013, eight months after the complaint, Jones’ car was broken into and his work phone was stolen. Instead of receiving a new phone then, though, he was written up — though white workers who had “similar incidents” were given replacement phones and not written up, according to the lawsuit."
       },
       {
-        "p": "Jones didn’t receive a replacement phone for six months."
+        "p": "Jones said he didn’t receive a replacement phone for six months."
       },
       {
         "p": "The men were given written warnings for things white employees were not chastised for, such as being late to work, according to the suit. On one occasion after the complaint, Bell was reported for lateness even though he had approved leave."
@@ -516,7 +513,7 @@
         "p": "“Things have gotten better since we’re at this federal level now,” Bell said. “Inside of Maryland, it was hectic, because they were the judge, the jury —  they held everything.”"
       },
       {
-        "p": "The men’s case contained a wide array of claims — including discrimination, retaliation and negligence — against the university."
+        "p": "The men’s case originally contained a wide array of claims — including discrimination, retaliation and negligence — against the university."
       },
       {
         "p": "In a June 14 opinion, a judge dismissed the men’s claims of race-based discrimination, writing that they had not provided enough evidence to support them or information to prove that their white co-workers were valid comparators. She called their complaint a “disjointed jumble of events, often devoid of explanation or context.”"
@@ -561,7 +558,7 @@
         "p": "“You won't believe how many people come to us with their stories,” Bell said."
       },
       {
-        "p": "And though Bell and Jones find it difficult to make a judgment across the array of Facilities shops, they said the standard for most workers in the department is this: Be happy you’ve got a job, and don’t question the way you’ve been treated or approach your higher-ups."
+        "p": "And though Bell and Jones find it difficult to make a judgment across the array of Facilities shops, they said the standard for many workers in the department is this: Be happy you’ve got a job, and don’t question the way you’ve been treated or approach your higher-ups."
       },
       {
         "p": "\"Anybody making any kind of money around here, they're gonna look out for each other,\" Jones said."
