@@ -44,7 +44,7 @@ nav
 
     margin: 0 px-to-em(85 * 0.25) 0 0
 
-    > p
+    > a
       font-size: px-to-em(10)
       height: auto
       opacity: 1
@@ -57,12 +57,12 @@ nav
   > div
     +flex(column, center, center)
     +respond-to(schmedium)
-      + p
+      + a
         height: auto !important
         opacity: 1 !important
         margin: 0 0 0 px-to-em(7.5)
 
-  > p
+  > a
     +respond-to(schmedium, min)
       height: 0
       margin: 0
@@ -83,7 +83,7 @@ nav
       background-color: transparent !important
       border-color: $accent
 
-      + p
+      + a
         color: $accent
 
 
@@ -94,7 +94,7 @@ nav
   margin: 0 px-to-em(20)
   width: px-to-em(14)
 
-  + p
+  + a
     color: $med
 
   &.active,

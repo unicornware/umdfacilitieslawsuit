@@ -411,7 +411,7 @@ nav {
       align-items: stretch;
       justify-content: flex-start;
       margin: 0 1.32812em 0 0; }
-      .navigation-link > p {
+      .navigation-link > a {
         font-size: 0.625em;
         height: auto;
         opacity: 1;
@@ -427,16 +427,16 @@ nav {
     align-items: center;
     justify-content: center; }
     @media all and (max-width: 48em) {
-      .navigation-link > div + p {
+      .navigation-link > div + a {
         height: auto !important;
         opacity: 1 !important;
         margin: 0 0 0 0.46875em; } }
-  .navigation-link > p {
+  .navigation-link > a {
     color: #f9fafc;
     font-size: 0.75em;
     text-align: center; }
     @media all and (min-width: 48em) {
-      .navigation-link > p {
+      .navigation-link > a {
         height: 0;
         margin: 0;
         opacity: 0; } }
@@ -455,9 +455,9 @@ nav {
       .navigation-link-circle.active, .navigation-link-circle:hover {
         background-color: transparent !important;
         border-color: #e51d37; }
-        .navigation-link-circle.active + p, .navigation-link-circle:hover + p {
+        .navigation-link-circle.active + a, .navigation-link-circle:hover + a {
           color: #e51d37; } }
-  .navigation-link-circle + p {
+  .navigation-link-circle + a {
     color: #9b9b9b; }
   .navigation-link-circle.active, .navigation-link-circle:hover {
     background-color: #e51d37; }

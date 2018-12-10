@@ -13,11 +13,12 @@ export default class Section extends React.Component {
 
     return (
       <React.Fragment>
-        <span id={id} className='spacer'>
+        <span className='spacer'>
+          <br />
           <br />
         </span>
-        <div className='section' >
-          <p className='section-heading'>{heading}</p>
+        <div className='section'>
+          <p className='section-heading' id={id}>{heading}</p>
           <div className='section-content'>
             {content.map((c, i) => {
               if (c.p) {

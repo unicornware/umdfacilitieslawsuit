@@ -116,15 +116,15 @@ class NavigationLink extends React.Component {
 
           {line ? <div className='navigation-link-line' /> : null}
         </div>
-        <p id={`navigation-text-${id}`}>
+        <a href={`#${id}`} id={`navigation-text-${id}`}>
           {text}
-        </p>
+        </a>
       </div>
     );
   }
 
   onClick = e => {
-    e.preventDefault();
+    // e.preventDefault();
 
     let linkId = `${e.target.id}`;
     let links = document.querySelectorAll('.navigation-link-circle');
