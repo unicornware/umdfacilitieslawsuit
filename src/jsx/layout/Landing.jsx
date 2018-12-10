@@ -8,23 +8,27 @@ export default class Landing extends React.Component {
     return (
       <div className='landing' id='landing'>
         <div className='container'>
-          <div className='blurb'>
-            <p>
-              This story is an in-depth feature on two electricians — DuRay Jones and Michael Bell — who are suing UMD for racial discrimination.
-            </p>
+          {/*
+            <div className='blurb'>
+              <p>
+                This story is an in-depth feature on two electricians — DuRay Jones and Michael Bell — who are suing UMD for racial discrimination.
+              </p>
 
-            <p>
-              They filed their lawsuit in federal court last summer, but besides an initial story with the basic facts from the court documents, no one has really reported on what drove them to file or what the process has been like for them.
-            </p>
+              <p>
+                They filed their lawsuit in federal court last summer, but besides an initial story with the basic facts from the court documents, no one has really reported on what drove them to file or what the process has been like for them.
+              </p>
 
-            <p>
-              The project is both a close look at their case and a narrative about how the stress of it has affected their home lives and mental health.
-            </p>
-          </div>
+              <p>
+                The project is both a close look at their case and a narrative about how the stress of it has affected their home lives and mental health.
+              </p>
+            </div>
+          */}
 
           <div className='title'>
-            <h1>Facilities Management Lawsuit</h1>
-            <h2>University of Maryland</h2>
+            <h1>
+              The story behind a $3 million racial discrimination lawsuit at UMD
+            </h1>
+            <h2>"Maryland has wrecked my life"</h2>
           </div>
 
           <div className='credit'>

@@ -1,3 +1,6 @@
+/* eslint-disable space-before-function-paren */
+/* eslint-disable camelcase */
+
 // react
 import * as React from 'react';
 
@@ -8,8 +11,6 @@ import { NavLink, Link } from 'react-router-dom';
 import footerMenu from '../../data/footer.json';
 import stayConnected from '../../data/stay-connected.json';
 
-/* eslint-disable space-before-function-paren */
-
 /**
  * Footer class. Renders the footer The footer contains the mega menu (with
  * links to all categories), contact information, the stay connected menu, and
@@ -19,23 +20,18 @@ export default class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuTypes: ['mega', 'stay-connected'],
       footerMenu: footerMenu.items,
       stayConnected: stayConnected.items
     };
   }
 
-  /**
-   * This function takes a category title as an argument and returns it
-   * lowercase with spaces replaced by dashes.
-   *
-   * ex: Other Links will becomes other-links.
-   *
-   * @param {string} title category title
-   * @return {string} category title lowercase with spaces replaced by dashes
-   */
-  getColumnId(title) {
-    return `footer-column-${title.toLowerCase().replace(' ', '-')}`;
+  componentDidMount() {
+    const { footerMenu, stayConnected } = this.state;
+
+    this.setState({
+      footerMenu: this._sanitize(footerMenu),
+      stayConnected: this._sanitize(stayConnected)
+    });
   }
 
   /**
@@ -46,38 +42,24 @@ export default class Footer extends React.Component {
     const { footerMenu, stayConnected } = this.state;
 
     return (
-      <footer>
+      <footer className='sticky'>
         <div className='container'>
-
           <p className='footer-title'>Enjoyed this story? Keep reading.</p>
 
           {/* categories */}
           <div className='categories'>
             {
               footerMenu.map((category, index) =>
-                <ul
-                  className='footer-column'
-                  id={this.getColumnId(category.title)}
-                  key={category.title.trim().toLowerCase()}
-                >
-                  <NavLink to={category.url} className={category.classes}>
-                    {category.title}
-                  </NavLink>
-                  <React.Fragment>
-                    {category.children.map(link =>
-                      <li key={link.title.trim().toLowerCase()}>
-                        <FooterLink {...link} />
-                      </li>
-                    )}
-                  </React.Fragment>
-                </ul>
+                <FooterColumn
+                  {...category}
+                  key={`footer-column-${category.id}`}
+                />
               )
             }
           </div>
 
           {/* contact info */}
           <div className='contact-editors'>
-
             <div className='contact'>
               <p className='contact-title-link'>
                 Contact Us
@@ -106,12 +88,19 @@ export default class Footer extends React.Component {
               </dl>
             </div>
 
-            <ul className='editors'>
+            <div className='editors'>
               <span>Editors</span>
-              <li>Ryan Romano</li>
-              <li>Christine Condon</li>
-              <li>Jillian Atelsek</li>
-            </ul>
+
+              <dl>
+                <dt><span>Project Editor</span></dt>
+                <dd>Christine Condon</dd>
+              </dl>
+
+              <dl>
+                <dt><span>Copy Editors</span></dt>
+                <dd>Jillian Atelsek, Daisy Grant, Arya Hodjat, Ryan Romano, Leah Brennan</dd>
+              </dl>
+            </div>
           </div>
 
           {/* social links and copyright */}
@@ -122,37 +111,118 @@ export default class Footer extends React.Component {
             </div>
 
             <div className='copyright'>
-              <Link
-                to='http://www.dbknews.com/'
+              <a
+                href='http://www.dbknews.com/'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='copyright-lab'>
                 &copy; 2018 The Diamondback
-              </Link>
+              </a>
 
-              <span className='copyright-lex'>
-                Designed and Developed by&nbsp;
-                <Link
-                  to='http://lexusdrumgold.com/'
-                >
-                  Lexus Drumgold
-                </Link>
-              </span>
+              <a
+                href='https://lexusdrumgold.design/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='copyright-lex'
+              >
+                Designed and Developed by Lexus Drumgold
+              </a>
             </div>
           </div>
         </div>
       </footer>
     );
   }
+
+  /**
+   * This function takes an array of objects and santizes them - objects in this
+   * array will definitely have an id, order, title, url, classes, and  children
+   * property.
+   *
+* @param {object[]} arr array of objects to sanitize
+* @return {object[]} array of sanitized objects.
+    */
+  _sanitize(arr) {
+    // build sanitized url
+    // urls shouldn't include /category or /category/other-links
+    let sanitizied_url = object => {
+      const { parent, title, url } = object;
+
+      let sanitized = parent === 84
+        ? title === 'GoCollegePark'
+          ? 'http://gocollegepark.com/'
+          : url.replace('/category/other-links', '')
+        : url.replace('/category', '');
+
+      sanitized = sanitized.substring(0, sanitized.length - 1);
+
+      if (title !== 'GoCollegePark') {
+        sanitized = `http://dbknews.com${sanitized}`;
+      }
+
+      return sanitized;
+    };
+
+    // build sanitized object
+    let sanitized_object = object => {
+      return {
+        id: object.id,
+        order: object.order,
+        parent: object.parent,
+        title: object.title,
+        url: sanitizied_url(object),
+        classes: object.classes,
+        children: object.children ? this._sanitize(object.children) : null
+      };
+    };
+
+    // return array of sanitized objects
+    return arr.map(object => sanitized_object(object));
+  }
 }
+
+/**
+ * Footer column class. Renders a footer column. Category titles are red links,
+ * with the list items being black and on hover turn red.
+ *
+ * @param {object} props column properties - id, url, classes, title, children
+ * @return {HTMLUListElement} footer column
+        */
+const FooterColumn = (props) => {
+  return (
+    <ul
+      className='footer-column'
+      id={`footer-column-${props.id}`}
+      key={`footer-column-${props.id}`}
+    >
+      <NavLink to={props.url} className={props.classes}>
+        {props.title}
+      </NavLink>
+      <React.Fragment>
+        {props.children.map(link =>
+          <li
+            id={`footer-link-${link.id}`}
+            key={`footer-link-${link.id}`}
+          >
+            <FooterLink {...link} />
+          </li>
+        )}
+      </React.Fragment>
+    </ul>
+  );
+};
 
 /**
  * Footer link class. Renders a footer link. Footer links, with the exception of
  * telephone links, are black. On hover, they are black and bold.
  *
- * @param {object} props link properties - url, classes, and title
- * @return {Link} footer link
- */
+* @param {object} props link properties - url, classes, and title
+* @return {HTMLAnchorElement} footer link
+  */
 const FooterLink = (props) => {
   return (
-    <Link to={props.url} className={props.classes}>{props.title}</Link>
+    <a href={props.url} className={props.classes} target='_blank'>
+      {props.title}
+    </a>
   );
 };
