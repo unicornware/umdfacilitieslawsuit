@@ -25,11 +25,21 @@ export default class Navigation extends React.Component {
               <NavLink smooth to='#landing'>
                 <i className='far fa-location-arrow' />
               </NavLink>
-              {sections.map((s, i) =>
-                <NavigationLink
-                  id={s.id} active={i === 0} line={i !== 6} index={i}
-                  key={s.id}
-                />
+              {sections.map((s, i) => {
+                if (i > 0) {
+                  return (
+                    <NavigationLink
+                      id={s.id}
+                      active={i === 0}
+                      line={i !== 6}
+                      index={i}
+                      key={s.id}
+                    />
+                  );
+                } else {
+                  return null;
+                }
+              }
               )}
             </div>
           </nav>

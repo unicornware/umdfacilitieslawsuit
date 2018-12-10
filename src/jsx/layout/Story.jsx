@@ -4,7 +4,7 @@ import * as React from 'react';
 import sections from '../../data/sections.json';
 
 // components
-import Section from '../components/Section';
+import Section from './Section';
 
 /* eslint-disable space-before-function-paren */
 /* eslint-disable array-callback-return */

@@ -1,6 +1,6 @@
 /* FOOTER STYLES
 
-$footer-border: px-to-em(0.5) solid $med
+$footer-border: px-to-em(0.5) solid $med2
 $footer-font-size: px-to-em(14)
 $footer-link-margin: 0 0 0 1em
 
@@ -71,6 +71,10 @@ footer
     margin: 0 0 0.5em
 
   a
+    +hocus
+      color: $accent
+
+
     color: $dark
     font-weight: 700
 
@@ -93,6 +97,13 @@ footer
   span
     color: $accent
     font-weight: 600
+
+  dl
+    &:not(:last-of-type)
+      margin: 0 0 0.5em
+
+    span
+      color: $dark
 
 .stay-connected
   +flex(row, baseline, flex-start)
@@ -130,14 +141,17 @@ footer
   &:hover
     font-weight: 700
 
+.copyright-lab,
+.copyright-lex
+  +hocus
+    font-weight: 700 !important
+
 .copyright-lab
   margin-bottom: px-to-em(5)
 
 .copyright-lex
-  color: rgba($med, 0.85)
+  +hocus
+    color: $accent !important
 
-  &:hover
-    color: $accent
 
-  a
-    color: rgba($med, 0.85)
+  color: rgba($med, 0.85) !important

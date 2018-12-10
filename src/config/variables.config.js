@@ -16,7 +16,7 @@ const BREAKPOINTS = {
 };
 
 const COLORS = {
-  dark: ['rgba(0, 0, 0, 1)', 'rgba(0, 0, 0, .75)'],
+  dark: ['rgba(0, 0, 0, 1)', 'rgba(0, 0, 0, .65)'],
   med: ['rgba(155, 155, 155, 1)', 'rgba(222, 222, 222, 1)'],
   light: 'rgba(249, 250, 252, 1)',
   accent: 'rgba(229, 29, 55, 1)'
