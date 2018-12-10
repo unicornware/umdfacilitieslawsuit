@@ -140,7 +140,6 @@ figcaption .credit {
     .caption {
       font-size: 0.8125em; } }
 
-/* LOADING COMPONENT STYLES */
 /* FOOTER STYLES */
 footer {
   border-top: 0.03125em solid #dedede;
@@ -312,11 +311,23 @@ footer {
   .landing h1 {
     color: #f9fafc;
     font-size: 2.25em; }
+    @media all and (max-width: 48em) {
+      .landing h1 {
+        font-size: 1.5625em; } }
+    @media all and (max-width: 30em) {
+      .landing h1 {
+        font-size: 1.375em; } }
   .landing h2 {
     color: #e51d37;
-    font-size: 1.25em;
+    font-size: 1.5625em;
     font-weight: 400;
     text-transform: uppercase; }
+    @media all and (max-width: 48em) {
+      .landing h2 {
+        font-size: 1.375em; } }
+    @media all and (max-width: 30em) {
+      .landing h2 {
+        font-size: 1.0625em; } }
 
 .blurb {
   color: rgba(249, 250, 252, 0.7);
@@ -353,10 +364,8 @@ footer {
 
 /* NAVIGATION LAYOUT COMPONENT STYLES */
 #navigation {
-  height: 100vh;
-  position: fixed;
-  width: 100vw;
-  z-index: 10; }
+  position: absolute;
+  z-index: 5; }
 
 nav {
   position: fixed;
@@ -393,7 +402,7 @@ nav {
 .navigation-link {
   display: flex;
   flex-direction: row-reverse;
-  align-items: stretch;
+  align-items: center;
   justify-content: flex-start; }
   @media all and (max-width: 48em) {
     .navigation-link {
@@ -423,7 +432,7 @@ nav {
         opacity: 1 !important;
         margin: 0 0 0 0.46875em; } }
   .navigation-link > p {
-    color: #dedede;
+    color: #f9fafc;
     font-size: 0.75em;
     text-align: center; }
     @media all and (min-width: 48em) {
@@ -464,7 +473,8 @@ nav {
 .section:last-of-type .section-content > .section-graf:last-of-type {
   color: #e51d37;
   font-size: 1.25em;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: 0; }
 
 .section-content {
   display: flex;
@@ -474,7 +484,7 @@ nav {
 
 .section-heading {
   color: #e51d37;
-  font-size: 1.125em;
+  font-size: 1.5em;
   font-weight: 700;
   margin-top: 0;
   text-transform: uppercase; }
@@ -482,9 +492,28 @@ nav {
 .section-graf {
   font-size: 0.9375em;
   margin: 0 0 1.25em; }
+  @media all and (min-width: 90em) {
+    .section-graf {
+      margin: 0 0 1.5em 0; } }
   @media all and (max-width: 48em) {
     .section-graf {
-      font-size: 0.8125em; } }
+      font-size: 0.875em; } }
+
+.section-pullquote {
+  border-left: 5px solid #dedede;
+  color: rgba(229, 29, 55, 0.5);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.875em;
+  margin: 0 0 0.75em 0;
+  padding: 0.5em 1em;
+  text-align: left; }
+  @media all and (max-width: 48em) {
+    .section-pullquote {
+      font-size: 1.5625em; } }
+  @media all and (max-width: 30em) {
+    .section-pullquote {
+      font-size: 1.25em; } }
 
 /* STORY LAYOUT COMPONENT STYLES */
 .story {

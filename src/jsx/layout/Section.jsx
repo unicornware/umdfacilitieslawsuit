@@ -28,7 +28,15 @@ export default class Section extends React.Component {
                     key={`content-${i}`}
                   />
                 );
-              } else if (c.img) {
+              } else if (c.blockquote) {
+                return (
+                  <blockquote
+                    className='section-pullquote'
+                    dangerouslySetInnerHTML={{ __html: c.blockquote }}
+                    key={`content-${i}`}
+                  />
+                );
+              } else {
                 if (c.img instanceof Array) {
                   return <Gallery images={c.img} key={`content-${i}`} />;
                 } else if (c.img instanceof Object) {

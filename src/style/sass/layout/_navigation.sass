@@ -1,10 +1,8 @@
 /* NAVIGATION LAYOUT COMPONENT STYLES
 
 #navigation
-  height: 100vh
-  position: fixed
-  width: 100vw
-  z-index: 10
+  position: absolute
+  z-index: 5
 
 nav
   +respond-to(schmedium)
@@ -33,15 +31,13 @@ nav
       +respond-to(schmedium)
         margin: 0 px-to-em(85 * 0.125) 0 0
 
-        // position: absolute
-
 
       color: $accent
       font-size: px-to-em(26)
       margin: 0 px-to-em(10) px-to-em(12.5) 0
 
 .navigation-link
-  +flex(row-reverse)
+  +flex(row-reverse, center)
 
   +respond-to(schmedium)
     +flex(row)
@@ -73,7 +69,7 @@ nav
       opacity: 0
 
 
-    color: $med2
+    color: $light
     font-size: px-to-em(12)
     text-align: center
 

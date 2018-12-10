@@ -3,7 +3,6 @@
 .landing
   +set-bkg-img('landing-bkg.png')
   +flex(column, flex-start, flex-end)
-  +respond-to(schmedium)
 
   height: 100vh
   padding-bottom: px-to-em(85)
@@ -13,13 +12,29 @@
     margin: 0
 
   h1
+    +respond-to(schmedium)
+      font-size: px-to-em(25)
+
+
+    +respond-to(small)
+      font-size: px-to-em(22)
+
+
     color: $light
     font-size: px-to-em(36)
 
   h2
+    +respond-to(schmedium)
+      font-size: px-to-em(22)
+
+
+    +respond-to(small)
+      font-size: px-to-em(17)
+
+
     color: $accent
     font:
-      size: px-to-em(20)
+      size: px-to-em(25)
       weight: 400
     text-transform: uppercase
 

@@ -7,7 +7,7 @@ import * as React from 'react';
 // react router
 import { NavLink, Link } from 'react-router-dom';
 
-// test menu data
+// footer data
 import footerMenu from '../../data/footer.json';
 import stayConnected from '../../data/stay-connected.json';
 

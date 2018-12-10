@@ -1,10 +1,7 @@
 /* eslint-disable space-before-function-paren */
 /* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 
-// NOTICE: importing reactn instead of react
-import React, { setGlobal } from 'reactn';
-import * as ReactDOM from 'react-dom';
+import * as React from 'react';
 
 // react router
 import { BrowserRouter } from 'react-router-dom';
@@ -13,11 +10,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Analytics from 'react-router-ga';
 
 // config
-import { ROOT } from './config/variables.config.js';
 import { GOOGLE_ANALYTICS_ID } from './config/secret.config.js';
-
-// components
-import Loading from './jsx/components/Loading.jsx';
 
 // layout components
 import Landing from './jsx/layout/Landing.jsx';
