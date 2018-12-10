@@ -17,14 +17,10 @@ export default class Image extends React.Component {
               className='caption'
               dangerouslySetInnerHTML={{ __html: caption }}
             />
-            <p className='credit'>
-              Photo by&nbsp;
-              <a
-                href={credit.url}
-                dangerouslySetInnerHTML={{ __html: credit.photographer }}
-                target='_blank'
-              />
-            </p>
+            <p
+              className='credit'
+              dangerouslySetInnerHTML={{ __html: `Photo by ${credit}` }}
+            />
           </figcaption>
         </figure>
       );

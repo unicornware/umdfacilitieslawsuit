@@ -30,6 +30,7 @@ export default class Navigation extends React.Component {
                   return (
                     <NavigationLink
                       id={s.id}
+                      heading={s.heading}
                       active={i === 0}
                       line={i !== 6}
                       index={i}
@@ -50,26 +51,51 @@ export default class Navigation extends React.Component {
 }
 
 class NavigationLink extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: $(window).width() > BREAKPOINTS.schmedium
+        ? props.heading : `#${props.id.toUpperCase()}`
+    };
+  }
+
   componentDidMount() {
-    const { id } = this.props;
+    const { id, heading } = this.props;
 
     $(`#navigation-link-${id}`).hover(
       () => {
         if ($(window).width() > BREAKPOINTS.schmedium) {
-          $('#navigation').css({ backgroundColor: COLORS.dark[1] });
-          $(`#navigation-text-${id}`).css(({ height: 'auto', opacity: 1 }));
+          $(`#navigation-text-${id}`).css(({
+            backgroundColor: COLORS.dark[0],
+            height: 'auto',
+            opacity: 1,
+            padding: '.5em 1.5em'
+          }));
         }
       },
       () => {
         if ($(window).width() > BREAKPOINTS.schmedium) {
           $('#navigation').css({ backgroundColor: 'transparent' });
-          $(`#navigation-text-${id}`).css(({ height: 0, opacity: 0 }));
+          $(`#navigation-text-${id}`).css(({
+            height: 0,
+            opacity: 0,
+            padding: 0
+          }));
         }
       }
     );
+
+    $(window).resize(() => {
+      if ($(window).width() > BREAKPOINTS.schmedium) {
+        this.setState({ text: heading });
+      } else {
+        this.setState({ text: `#${id.toUpperCase()}` });
+      }
+    });
   }
 
   render() {
+    const { text } = this.state;
     const { id, line } = this.props;
 
     return (
@@ -88,7 +114,7 @@ class NavigationLink extends React.Component {
           {line ? <div className='navigation-link-line' /> : null}
         </div>
         <p id={`navigation-text-${id}`}>
-          {`#${id.toUpperCase()}`}
+          {text}
         </p>
       </div>
     );

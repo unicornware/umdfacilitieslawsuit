@@ -32,14 +32,11 @@ export default class Landing extends React.Component {
           </div>
 
           <div className='credit'>
-            <p>
-              Presented by&nbsp;
-              <a href='http://www.dbknews.com/'
-                target='_blank'
-                rel='noopener noreferrer'>
-                The Diamondback
-              </a>
-            </p>
+            <a href='http://www.dbknews.com/'
+              target='_blank'
+              rel='noopener noreferrer'>
+              The Diamondback
+            </a>
             <p>
               Story by&nbsp;
               <a href='http://www.dbknews.com/author/jatelsek/'
