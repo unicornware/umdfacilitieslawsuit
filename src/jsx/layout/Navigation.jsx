@@ -31,7 +31,9 @@ export default class Navigation extends React.Component {
                   return (
                     <NavigationLink
                       id={s.id}
-                      heading={s.heading}
+                      heading={i === 1
+                        ? '"Maryland has wrecked my life"' : s.heading
+                      }
                       active={i === 0}
                       line={i !== 6}
                       index={i}

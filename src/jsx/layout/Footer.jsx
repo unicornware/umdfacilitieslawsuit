@@ -98,7 +98,7 @@ export default class Footer extends React.Component {
 
               <dl>
                 <dt><span>Copy Editors</span></dt>
-                <dd>Jillian Atelsek, Daisy Grant, Arya Hodjat, Ryan Romano, Leah Brennan</dd>
+                <dd>Daisy Grant, Arya Hodjat, Ryan Romano, Leah Brennan</dd>
               </dl>
             </div>
           </div>
