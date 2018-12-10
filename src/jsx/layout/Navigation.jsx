@@ -1,4 +1,8 @@
-import * as React from 'react';
+/* eslint-disable space-before-function-paren */
+/* eslint-disable no-undef */
+
+// NOTICE: importing reactn instead of react
+import React from 'reactn';
 
 // react router
 import { NavHashLink as NavLink } from 'react-router-hash-link';
@@ -11,9 +15,6 @@ import { BREAKPOINTS, COLORS } from '../../config/variables.config';
 
 // sections
 import sections from '../../data/sections.json';
-
-/* eslint-disable space-before-function-paren */
-/* eslint-disable no-undef */
 
 export default class Navigation extends React.Component {
   render() {
@@ -30,10 +31,7 @@ export default class Navigation extends React.Component {
                   return (
                     <NavigationLink
                       id={s.id}
-<<<<<<< HEAD
                       heading={s.heading}
-=======
->>>>>>> master
                       active={i === 0}
                       line={i !== 6}
                       index={i}

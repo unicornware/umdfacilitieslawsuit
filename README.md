@@ -1,10 +1,7 @@
 # University of Maryland Facilities Management Lawsuit
 
-This story is an in-depth feature on two electricians — DuRay Jones and Michael Bell — who are suing UMD for racial discrimination.  
+> This story is an in-depth feature on two electricians — DuRay Jones and Michael Bell — who are suing UMD for racial discrimination. They filed their lawsuit in federal court last summer, but besides an initial story with the basic facts from the court documents, no one has really reported on what drove them to file or what the process has been like for them. The project is both a close look at their case and a narrative about how the stress of it has affected their home lives and mental health. 
 
-They filed their lawsuit in federal court last summer, but besides an initial story with the basic facts from the court documents, no one has really reported on what drove them to file or what the process has been like for them.  
-
-The project is both a close look at their case and a narrative about how the stress of it has affected their home lives and mental health. 
 
 #### Overview
 [Getting Started](#getting-started)  
@@ -13,6 +10,7 @@ The project is both a close look at their case and a narrative about how the str
 [Deployment](#deployment)  
 [Built With](#built-with)  
 [Issues](#issues) 
+
 
 ## Getting Started
 
@@ -40,9 +38,11 @@ Follow the steps below to get your development enviroment set up.
 
     in the terminal. This will install the necessary dependencies for the project. A list of those dependencies can be found in `package.json`.
 
+
 ## Design
 
 The prototype for this site can be viewed [here](https://preview.uxpin.com/84f9eee7b6d7c2880279678be0de4bcc16ef7e30#/pages/98489984/documentation/no-panels).
+
 
 ## Development
 
@@ -80,12 +80,11 @@ This will to the remote’s master branch.
 
 Once deployed, the site can be viewed [here](https://umdracialdiscrimination.herokuapp.com/).
 
-## Built With
 
+## Built With
 - [ReactJS](https://reactjs.org/) - JavaScript Library
-- [React Router](https://reacttraining.com/react-router/web/guides/philosophy)  
 - [Sass](https://rometools.github.io/rome/) - CSS Preprocessor
-- [Google Analytics](https://github.com/fknussel/react-router-ga) - Analytics tracking
+
 
 ## Issues
 Designed and developed by [Lexus Drumgold](https://lexusdrumgold.com/) from [The Diamondback Lab](https://github.com/The-Diamondback-Lab); please get in contact with Lex if you have any comments or concerns.

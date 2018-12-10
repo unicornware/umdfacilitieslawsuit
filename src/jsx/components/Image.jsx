@@ -1,6 +1,6 @@
-import * as React from 'react';
-
 /* eslint-disable space-before-function-paren */
+
+import * as React from 'react';
 
 export default class Image extends React.Component {
   render() {

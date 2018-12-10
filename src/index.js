@@ -11,8 +11,6 @@ import { ROOT } from './config/variables.config.js';
 // application
 import App from './App.jsx';
 
-/* eslint-disable no-unused-expressions */
-
 /*
  * Entry point. Renders React components onto index.html
  */

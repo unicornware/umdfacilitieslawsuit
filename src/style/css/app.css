@@ -140,7 +140,6 @@ figcaption .credit {
     .caption {
       font-size: 0.8125em; } }
 
-/* LOADING COMPONENT STYLES */
 /* FOOTER STYLES */
 footer {
   border-top: 0.03125em solid #dedede;
@@ -365,15 +364,8 @@ footer {
 
 /* NAVIGATION LAYOUT COMPONENT STYLES */
 #navigation {
-<<<<<<< HEAD
   position: absolute;
   z-index: 5; }
-=======
-  height: 100vh;
-  position: fixed;
-  width: 100vw;
-  z-index: 10; }
->>>>>>> master
 
 nav {
   position: fixed;
@@ -481,12 +473,8 @@ nav {
 .section:last-of-type .section-content > .section-graf:last-of-type {
   color: #e51d37;
   font-size: 1.25em;
-<<<<<<< HEAD
   font-weight: 700;
   margin-bottom: 0; }
-=======
-  font-weight: 700; }
->>>>>>> master
 
 .section-content {
   display: flex;
@@ -496,11 +484,7 @@ nav {
 
 .section-heading {
   color: #e51d37;
-<<<<<<< HEAD
   font-size: 1.5em;
-=======
-  font-size: 1.125em;
->>>>>>> master
   font-weight: 700;
   margin-top: 0;
   text-transform: uppercase; }
@@ -508,7 +492,6 @@ nav {
 .section-graf {
   font-size: 0.9375em;
   margin: 0 0 1.25em; }
-<<<<<<< HEAD
   @media all and (min-width: 90em) {
     .section-graf {
       margin: 0 0 1.5em 0; } }
@@ -531,11 +514,6 @@ nav {
   @media all and (max-width: 30em) {
     .section-pullquote {
       font-size: 1.25em; } }
-=======
-  @media all and (max-width: 48em) {
-    .section-graf {
-      font-size: 0.8125em; } }
->>>>>>> master
 
 /* STORY LAYOUT COMPONENT STYLES */
 .story {
