@@ -52,8 +52,7 @@ dd {
   width: 100%; }
 
 .sticky {
-  position: sticky;
-  z-index: 5; }
+  position: sticky; }
 
 /* GALLERY COMPONENT STYLES */
 .gallery {
@@ -145,7 +144,8 @@ figcaption .credit {
 footer {
   border-top: 0.03125em solid #dedede;
   padding: 2.125em 0;
-  width: 100vw; }
+  width: 100vw;
+  z-index: 5; }
   footer .container {
     display: flex;
     flex-direction: column;
