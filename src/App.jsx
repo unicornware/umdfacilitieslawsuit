@@ -10,7 +10,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Analytics from 'react-router-ga';
 
 // config
-import { GOOGLE_ANALYTICS_ID } from './config/secret.config.js';
+import { GOOGLE_ANALYTICS_ID } from './config/variables.config';
 
 // layout components
 import Landing from './jsx/layout/Landing.jsx';

@@ -26,11 +26,10 @@ export default class Footer extends React.Component {
   }
 
   componentDidMount() {
-    const { footerMenu, stayConnected } = this.state;
+    const { footerMenu } = this.state;
 
     this.setState({
-      footerMenu: this._sanitize(footerMenu),
-      stayConnected: this._sanitize(stayConnected)
+      footerMenu: this._sanitize(footerMenu)
     });
   }
 

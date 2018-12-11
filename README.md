@@ -3,6 +3,7 @@
 > This story is an in-depth feature on two electricians — DuRay Jones and Michael Bell — who are suing UMD for racial discrimination. They filed their lawsuit in federal court last summer, but besides an initial story with the basic facts from the court documents, no one has really reported on what drove them to file or what the process has been like for them. The project is both a close look at their case and a narrative about how the stress of it has affected their home lives and mental health. 
 
 
+
 #### Overview
 [Getting Started](#getting-started)  
 [Design](#design)  
@@ -48,19 +49,23 @@ The prototype for this site can be viewed [here](https://preview.uxpin.com/84f9e
 
 Open a new terminal tab and run `npm start`. This will launch the project on your local machine, compile your sass files, and minify your css files.
 
-### Deployment
+## Deployment
 
-#### [Github Integration](https://devcenter.heroku.com/articles/github-integration)
+**Before deploying, make sure to run the command `npm run build`. This will
+create a new optimized production build of the project.** 
+ 
+
+### [Github Integration](https://devcenter.heroku.com/articles/github-integration)
 When ready to deploy, commit and push your changes. If [automatic deploys](https://devcenter.heroku.com/articles/github-integration#automatic-deploys) are enabled, then Heroku will build and deploy all pushes to the specified branch.
 
-#### [With Git](https://devcenter.heroku.com/articles/git)
-##### For a new Heroku app
+### [With Git](https://devcenter.heroku.com/articles/git)
+#### For a new Heroku app
 Run the following command `heroku create <name>`.  
 
 This will create a new Heroku application titled _name_.
     
-##### For an existing Heroku app
-Run the following command `heroku git:remote -a umdracialdiscrimination`.  
+#### For an existing Heroku app
+Run the following command `heroku git:remote -a umd-facilities-lawsuit`.  
 
 This adds a remote to your local repository.
 
@@ -78,12 +83,13 @@ To deploy a non master branch, run the command `git push heroku <non-master-bran
 
 This will to the remote’s master branch.
 
-Once deployed, the site can be viewed [here](https://umdracialdiscrimination.herokuapp.com/).
+Once deployed, the site can be viewed [here](https://umdfacilitieslawsuit.herokuapp.com).
 
 
 ## Built With
 - [ReactJS](https://reactjs.org/) - JavaScript Library
 - [Sass](https://rometools.github.io/rome/) - CSS Preprocessor
+- [Google Analytics for React Router](https://github.com/fknussel/react-router-ga)
 
 
 ## Issues

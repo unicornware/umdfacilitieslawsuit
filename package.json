@@ -18,6 +18,7 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm-run-all build-css build-js",
     "deploy": "git push heroku master",
+    "force-deploy": "git push heroku master -f",
     "serve": "serve -s build",
     "test": "semistandard && react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

@@ -22,4 +22,6 @@ const COLORS = {
   accent: 'rgba(229, 29, 55, 1)'
 };
 
-export { ROOT, BREAKPOINTS, COLORS };
+const GOOGLE_ANALYTICS_ID = 'UA-130746753-1';
+
+export { ROOT, BREAKPOINTS, COLORS, GOOGLE_ANALYTICS_ID };
