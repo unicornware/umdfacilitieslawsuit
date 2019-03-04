@@ -7,7 +7,6 @@
 
 #### Overview
 [Getting Started](#getting-started)  
-[Design](#design)  
 [Development](#development)  
 [Deployment](#deployment)  
 [Built With](#built-with)  
@@ -32,7 +31,7 @@ Follow the steps below to get your development enviroment set up.
     git clone https://github.com/The-Diamondback-Lab/umd-facilities-lawsuit.git
     ```
 
-2.  After cloning the repo, open the project. In the boilerplate-reactjs folder, run the following command:
+2.  After cloning the repo, open the project. In the project directory, run the following command:
 
     ```
     npm install
