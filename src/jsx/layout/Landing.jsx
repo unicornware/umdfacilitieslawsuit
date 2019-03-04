@@ -1,7 +1,6 @@
-/* eslint-disable space-before-function-paren */
 /* eslint-disable no-undef */
 
-import * as React from 'react';
+import * as React from 'react'
 
 /**
  * Landing section class. Renders the landing section, a full page section with
@@ -13,7 +12,7 @@ export default class Landing extends React.Component {
    *
    * @return {HTMLDivElement} div containing the landing section content
    */
-  render() {
+  render = () => {
     return (
       <div className='landing' id='landing'>
         <div className='container'>
@@ -41,6 +40,6 @@ export default class Landing extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

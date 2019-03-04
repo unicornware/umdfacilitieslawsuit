@@ -1,15 +1,16 @@
-/* eslint-disable space-before-function-paren */
 /* eslint-disable camelcase */
+/* eslint-disable no-undef */
+/* eslint-disable space-before-function-paren */
 
 // react
-import * as React from 'react';
+import * as React from 'react'
 
 // react router
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom'
 
 // footer data
-import footerMenu from '../../data/footer.json';
-import stayConnected from '../../data/stay-connected.json';
+import footerMenu from '../../data/footer.json'
+import stayConnected from '../../data/stay-connected.json'
 
 /**
  * Footer class. Renders the footer The footer contains the mega menu (with
@@ -18,27 +19,27 @@ import stayConnected from '../../data/stay-connected.json';
  */
 export default class Footer extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       footerMenu: footerMenu.items,
       stayConnected: stayConnected.items
-    };
+    }
   }
 
-  componentDidMount() {
-    const { footerMenu } = this.state;
+  componentDidMount = () => {
+    const { footerMenu } = this.state
 
     this.setState({
       footerMenu: this._sanitize(footerMenu)
-    });
+    })
   }
 
   /**
    * Renders the footer. The footer contains the mega menu (with links to all
    * categories), contact information, the stay connected menu, and copyright.
    */
-  render() {
-    const { footerMenu, stayConnected } = this.state;
+  render = () => {
+    const { footerMenu, stayConnected } = this.state
 
     return (
       <footer>
@@ -131,7 +132,7 @@ export default class Footer extends React.Component {
           </div>
         </div>
       </footer>
-    );
+    )
   }
 
   /**
@@ -146,22 +147,22 @@ export default class Footer extends React.Component {
     // build sanitized url
     // urls shouldn't include /category or /category/other-links
     let sanitizied_url = object => {
-      const { parent, title, url } = object;
+      const { parent, title, url } = object
 
       let sanitized = parent === 84
         ? title === 'GoCollegePark'
           ? 'http://gocollegepark.com/'
           : url.replace('/category/other-links', '')
-        : url.replace('/category', '');
+        : url.replace('/category', '')
 
-      sanitized = sanitized.substring(0, sanitized.length - 1);
+      sanitized = sanitized.substring(0, sanitized.length - 1)
 
       if (title !== 'GoCollegePark') {
-        sanitized = `http://dbknews.com${sanitized}`;
+        sanitized = `http://dbknews.com${sanitized}`
       }
 
-      return sanitized;
-    };
+      return sanitized
+    }
 
     // build sanitized object
     let sanitized_object = object => {
@@ -173,11 +174,11 @@ export default class Footer extends React.Component {
         url: sanitizied_url(object),
         classes: object.classes,
         children: object.children ? this._sanitize(object.children) : null
-      };
-    };
+      }
+    }
 
     // return array of sanitized objects
-    return arr.map(object => sanitized_object(object));
+    return arr.map(object => sanitized_object(object))
   }
 }
 
@@ -188,7 +189,7 @@ export default class Footer extends React.Component {
  * @param {object} props column properties - id, url, classes, title, children
  * @return {HTMLUListElement} footer column
         */
-const FooterColumn = (props) => {
+const FooterColumn = props => {
   return (
     <ul
       className='footer-column'
@@ -209,8 +210,8 @@ const FooterColumn = (props) => {
         )}
       </React.Fragment>
     </ul>
-  );
-};
+  )
+}
 
 /**
  * Footer link class. Renders a footer link. Footer links, with the exception of
@@ -219,10 +220,10 @@ const FooterColumn = (props) => {
 * @param {object} props link properties - url, classes, and title
 * @return {HTMLAnchorElement} footer link
   */
-const FooterLink = (props) => {
+const FooterLink = props => {
   return (
     <a href={props.url} className={props.classes} target='_blank'>
       {props.title}
     </a>
-  );
-};
+  )
+}

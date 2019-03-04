@@ -1,21 +1,21 @@
 // react
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
 
 // service worker
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker'
 
 // config
-import { ROOT } from './config/variables.config.js';
+import { ROOT } from './config/variables.config.js'
 
 // application
-import App from './App.jsx';
+import App from './App.jsx'
 
 /*
  * Entry point. Renders React components onto index.html
  */
 
 // render Story
-ReactDOM.render(<App />, ROOT.app);
+ReactDOM.render(<App />, ROOT.app)
 
-registerServiceWorker();
+registerServiceWorker()

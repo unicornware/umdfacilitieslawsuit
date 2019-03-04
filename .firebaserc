@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "umdfacilitieslawsuit"
+  },
+  "targets": {
+    "umdfacilitieslawsuit": {
+      "hosting": {
+        "staging": [
+          "staging-umdfacilitieslawsuit"
+        ],
+        "production": [
+          "umdfacilitieslawsuit"
+        ]
+      }
+    }
+  }
+}

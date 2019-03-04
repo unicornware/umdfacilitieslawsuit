@@ -1,23 +1,23 @@
-/* eslint-disable space-before-function-paren */
 /* eslint-disable no-undef */
+/* eslint-disable space-before-function-paren */
 
 // NOTICE: importing reactn instead of react
-import React from 'reactn';
+import React from 'reactn'
 
 // react router
-import { NavHashLink as NavLink } from 'react-router-hash-link';
+import { NavHashLink as NavLink } from 'react-router-hash-link'
 
 // jquery
-import $ from 'jquery';
+import $ from 'jquery'
 
 // comfig
-import { BREAKPOINTS, COLORS } from '../../config/variables.config';
+import { BREAKPOINTS, COLORS } from '../../config/variables.config'
 
 // sections
-import sections from '../../data/sections.json';
+import sections from '../../data/sections.json'
 
 export default class Navigation extends React.Component {
-  render() {
+  render = () => {
     return (
       <div id='navigation'>
         <div className='container'>
@@ -39,9 +39,9 @@ export default class Navigation extends React.Component {
                       index={i}
                       key={s.id}
                     />
-                  );
+                  )
                 } else {
-                  return null;
+                  return null
                 }
               }
               )}
@@ -49,21 +49,21 @@ export default class Navigation extends React.Component {
           </nav>
         </div>
       </div>
-    );
+    )
   }
 }
 
 class NavigationLink extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       text: $(window).width() > BREAKPOINTS.schmedium
         ? props.heading : `#${props.id.toUpperCase().replace('-', ' ')}`
-    };
+    }
   }
 
-  componentDidMount() {
-    const { id, heading } = this.props;
+  componentDidMount = () => {
+    const { id, heading } = this.props
 
     $(`#navigation-link-${id}`).hover(
       () => {
@@ -73,33 +73,33 @@ class NavigationLink extends React.Component {
             height: 'auto',
             opacity: 1,
             padding: '.5em 1.5em'
-          }));
+          }))
         }
       },
       () => {
         if ($(window).width() > BREAKPOINTS.schmedium) {
-          $('#navigation').css({ backgroundColor: 'transparent' });
+          $('#navigation').css({ backgroundColor: 'transparent' })
           $(`#navigation-text-${id}`).css(({
             height: 0,
             opacity: 0,
             padding: 0
-          }));
+          }))
         }
       }
-    );
+    )
 
     $(window).resize(() => {
       if ($(window).width() > BREAKPOINTS.schmedium) {
-        this.setState({ text: heading });
+        this.setState({ text: heading })
       } else {
-        this.setState({ text: `#${id.toUpperCase().replace('-', ' ')}` });
+        this.setState({ text: `#${id.toUpperCase().replace('-', ' ')}` })
       }
-    });
+    })
   }
 
   render() {
-    const { text } = this.state;
-    const { id, line } = this.props;
+    const { text } = this.state
+    const { id, line } = this.props
 
     return (
       <div
@@ -120,19 +120,19 @@ class NavigationLink extends React.Component {
           {text}
         </a>
       </div>
-    );
+    )
   }
 
   onClick = e => {
     // e.preventDefault();
 
-    let linkId = `${e.target.id}`;
-    let links = document.querySelectorAll('.navigation-link-circle');
+    let linkId = `${e.target.id}`
+    let links = document.querySelectorAll('.navigation-link-circle')
 
     links.forEach(link => {
       linkId === link.id
         ? $(`#${link.id}`).addClass('active')
-        : $(`#${link.id}`).removeClass('active');
-    });
+        : $(`#${link.id}`).removeClass('active')
+    })
   }
 }

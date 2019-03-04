@@ -2,7 +2,7 @@
 
 > This story is an in-depth feature on two electricians — DuRay Jones and Michael Bell — who are suing UMD for racial discrimination. They filed their lawsuit in federal court last summer, but besides an initial story with the basic facts from the court documents, no one has really reported on what drove them to file or what the process has been like for them. The project is both a close look at their case and a narrative about how the stress of it has affected their home lives and mental health. 
 
-
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 #### Overview
 [Getting Started](#getting-started)  
@@ -39,51 +39,38 @@ Follow the steps below to get your development enviroment set up.
 
     in the terminal. This will install the necessary dependencies for the project. A list of those dependencies can be found in `package.json`.
 
-
-## Design
-
-The prototype for this site can be viewed [here](https://preview.uxpin.com/84f9eee7b6d7c2880279678be0de4bcc16ef7e30#/pages/98489984/documentation/no-panels).
+3. Install Firebase command line tools using npm:
+    ```
+    npm install -g firebase-tools
+    ```  
+    
+4. To set up the Firebase targets, run the following in your terminal:
+    1. `firebase target:apply hosting staging staging-umdfacilitieslawsuit`
+    2. `firebase target:apply hosting production umdfacilitieslawsuit`
 
 
 ## Development
-
-Open a new terminal tab and run `npm start`. This will launch the project on your local machine, compile your sass files, and minify your css files.
+Open a new terminal tab and run `npm run dev`. This will launch the project on
+your local machine, compile your sass files, and minify your css files.
 
 ## Deployment
+If necessary, update `.firebaserc` and `firebase.json` to configure Firebase
+Hosting, and push the changes to a release branch.
+- **Note:** The predeploy and rewrites properties are not mandatory for
+   Firebase, but they are mandatory for this project. 
 
-**Before deploying, make sure to run the command `npm run build`. This will
-create a new optimized production build of the project.** 
- 
+**Staging**  
+Deploy using one of the following options:
+- Run `npm run deploy-staging` in your terminal to deploy to Firebase.
+- Run `firebase deploy -m "<YOUR_MESSAGE>" --only hosting:staging` to
+  deploy with an optional deploy message.
 
-### [Github Integration](https://devcenter.heroku.com/articles/github-integration)
-When ready to deploy, commit and push your changes. If [automatic deploys](https://devcenter.heroku.com/articles/github-integration#automatic-deploys) are enabled, then Heroku will build and deploy all pushes to the specified branch.
-
-### [With Git](https://devcenter.heroku.com/articles/git)
-#### For a new Heroku app
-Run the following command `heroku create <name>`.  
-
-This will create a new Heroku application titled _name_.
-    
-#### For an existing Heroku app
-Run the following command `heroku git:remote -a umd-facilities-lawsuit`.  
-
-This adds a remote to your local repository.
-
-When ready to deloy, 
-
-1. Run the command `npm run build`.
-
-2. Add and commit your changes using the command `git commit -am "<YOUR
-   MESSAGE>"`.
-
-3. Run the command `npm run deploy` or `git push heroku master`.  
-    
-
-To deploy a non master branch, run the command `git push heroku <non-master-branch-name>:master`.  
-
-This will to the remote’s master branch.
-
-Once deployed, the site can be viewed [here](https://umdfacilitieslawsuit.herokuapp.com).
+**Production**  
+Deploy using one of the following options:
+- Run `npm run deploy-production` in your terminal to deploy to Firebase. The
+  predeploy hook will create a production build of the project.
+- Run `firebase deploy -m "<YOUR_MESSAGE>" --only hosting:production`
+  to deploy with an optional deploy message.
 
 
 ## Built With

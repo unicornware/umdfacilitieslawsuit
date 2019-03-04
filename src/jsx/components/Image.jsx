@@ -1,13 +1,14 @@
+/* eslint-disable no-undef */
 /* eslint-disable space-before-function-paren */
 
-import * as React from 'react';
+import * as React from 'react'
 
 export default class Image extends React.Component {
-  render() {
-    const { url, caption, credit } = this.props;
+  render = () => {
+    const { url, caption, credit } = this.props
 
     if (url) {
-      const id = url.replace('/assets/images/', '').replace('.jpg', '');
+      const id = url.replace('/assets/images/', '').replace('.jpg', '')
 
       return (
         <figure id={id} className='section-img'>
@@ -23,9 +24,9 @@ export default class Image extends React.Component {
             />
           </figcaption>
         </figure>
-      );
+      )
     } else {
-      return null;
+      return null
     }
   }
 }
