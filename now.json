@@ -7,7 +7,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "react-scripts"
+      "use": "@now/static"
     }
   ],
   "regions": [
