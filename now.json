@@ -1,0 +1,25 @@
+{
+  "name": "umdfacilitieslawsuit",
+  "version": 2,
+  "public": true,
+  "alias": "umdfacilitieslawsuit.dbknews.com",
+  "scope": "the-diamondback-lab",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "react-scripts"
+    }
+  ],
+  "regions": [
+    "iad1"
+  ],
+  "routes": [
+    {
+      "src": "/repo",
+      "status": 301,
+      "headers": {
+        "Location": "https://github.com/The-Diamondback-Lab/umdfacilitieslawsuit"
+      }
+    }
+  ]
+}

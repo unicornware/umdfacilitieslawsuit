@@ -2,20 +2,29 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-// service worker
-import registerServiceWorker from './registerServiceWorker'
-
 // config
 import { ROOT } from './config/variables.config.js'
 
-// application
-import App from './App.jsx'
+// React application
+import App from './components/App'
 
-/*
- * Entry point. Renders React components onto index.html
+// Service worker
+import * as sw from './config/sw.config'
+
+// Compiled Sass stylesheet
+import './sass/app.sass'
+
+/**
+ * @file Application entry point
+ * @author Lexus Drumgold <lex@lexusdrumgold.design>
  */
 
-// render Story
+/** Render application */
 ReactDOM.render(<App />, ROOT.app)
 
-registerServiceWorker()
+/**
+ * If you want your app to work offline and load faster, you can change
+ * unregister() to register() below. Note this comes with some pitfalls.
+ * @see {@link https://bit.ly/CRA-PWA}
+ */
+sw.unregister()

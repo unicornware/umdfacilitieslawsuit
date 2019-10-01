@@ -116,7 +116,8 @@ export default class Footer extends React.Component {
                 href='http://www.dbknews.com/'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='copyright-lab'>
+                className='copyright-lab'
+              >
                 &copy; 2018 The Diamondback
               </a>
 
@@ -222,7 +223,7 @@ const FooterColumn = props => {
   */
 const FooterLink = props => {
   return (
-    <a href={props.url} className={props.classes} target='_blank'>
+    <a href={props.url} className={props.classes} target='_blank' rel='noopener noreferrer'>
       {props.title}
     </a>
   )

@@ -4,8 +4,8 @@
 import * as React from 'react'
 
 // components
-import Gallery from '../components/Gallery'
-import Image from '../components/Image'
+import { Image } from '../atoms'
+import { Gallery } from '../organisms'
 
 export default class Section extends React.Component {
   render = () => {

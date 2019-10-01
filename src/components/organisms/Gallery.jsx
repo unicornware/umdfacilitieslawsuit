@@ -8,7 +8,7 @@ import * as React from 'react'
 import $ from 'jquery'
 
 // components
-import Image from './Image'
+import { Image } from '../atoms'
 
 export default class Gallery extends React.Component {
   render = () => {

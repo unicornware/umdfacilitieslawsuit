@@ -7,7 +7,7 @@ import * as React from 'react'
 import sections from '../../data/sections.json'
 
 // components
-import Section from './Section'
+import { Section } from '../templates'
 
 export default class Story extends React.Component {
   render = () => {
