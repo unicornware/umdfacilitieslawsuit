@@ -54,4 +54,4 @@ your local machine, compile your sass files, and minify your css files.
 - [Google Analytics for React Router](https://github.com/fknussel/react-router-ga)
 
 ## Issues
-Designed and developed by [Lexus Drumgold](https://flexdevelopmentllc.web.app) from [The Diamondback Lab](https://github.com/The-Diamondback-Lab); please get in contact with Lex if you have any comments or concerns.
+Designed and developed by [Lexus Drumgold](https://flexdevelopment.llc); please get in contact with Lex if you have any comments or concerns.
