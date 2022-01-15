@@ -28,7 +28,7 @@ Follow the steps below to get your development enviroment set up.
 1.  Pull the repo. Open the terminal and and run the following:
 
     ```
-    git clone https://github.com/The-Diamondback-Lab/umd-facilities-lawsuit.git
+    git clone https://github.com/unicornware/umdfacilitieslawsuit.git
     ```
 
 2.  After cloning the repo, open the project. In the project directory, run the following command:
